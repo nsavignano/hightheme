@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Light Blue - Admin Template</title>
+    <link href="css/font.css" rel="stylesheet"> 
+    <link href="css/button.css" rel="stylesheet">     
+    <link href="css/dash.css" rel="stylesheet">  
+    <link href="tab/css/tab.css" rel="stylesheet">            
+    <link href="bar/css/bar.css" rel="stylesheet">
+    <link href="popover/css/popover.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+
+</head>
+<body class="background-dark">
+
+    
+<div class="row-fluid">
+    <div class="span2 offset10">
+        <section class="widget">
+        <header class="page-header">
+        <div class="nav">
+        <a href="#" id="settings"
+           title="Settings"
+           data-toggle="popover"
+           data-placement="bottom">
+            <i><span class="glyphicon glyphicon-cog"></span></i>
+        </a>
+        </div> 
+        </header>
+        </section>
+    </div>  
+</div> 
+<div class="row-fluid">
+    <div class="span3">
+        <section class="widget widget-tabs">
+            <header>
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#stats" data-toggle="tab">Users</a>
+                    </li>
+                    <li>
+                        <a href="#report" data-toggle="tab">Favorites</a>
+                    </li>
+                    <li>
+                        <a href="#dropdown1" data-toggle="tab">Commenters</a>
+                    </li>
+                </ul>
+            </header>
+            <div class="body tab-content">
+                <div id="stats" class="tab-pane active clearfix">
+                    <h5 class="tab-header"><i class="icon-group"></i> Last logged-in users</h5>
+                                        <ul class="users-list">
+                        <li>
+                            <img src="tab/img/1.jpg" alt="" class="pull-left img-circle"/>
+                            <div class="user-info">
+                                <div class="name"><a href="#">Finees Lund</a></div>
+                                <div class="position">Product Designer</div>
+                                <div class="time">Last logged-in: Mar 20, 18:46</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="report" class="tab-pane">
+                    <h5 class="tab-header"><i class="icon-star"></i> Popular contacts</h5>
+                    <ul class="users-list user-list-no-hover">
+                        <li>
+                            <img src="tab/img/14.jpg" alt="" class="pull-left img-circle"/>
+                            <div class="user-info">
+                                <div class="name"><a href="#">Jessica Johnsson</a></div>
+                                <div class="options">
+                                    <button class="btn btn-mini btn-success">
+                                        <i class="icon-phone"></i>
+                                        Call
+                                    </button>
+                                    <button class="btn btn-mini btn-warning">
+                                        <i class="icon-envelope-alt"></i>
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>                    
+                </div>
+                <div id="dropdown1" class="tab-pane">
+                    <h5 class="tab-header"><i class="icon-comments"></i> Top Commenters</h5>
+             </div>  
+         </section>   
+    </div>
+</div>                           
+<div class="row-fluid">
+    <div class="span4">
+        <section class="widget">
+            <header>
+                <h4>
+                    <i class="icon-magnet"></i>
+                    Server Overview
+                </h4>
+            </header>
+            <div class="body">
+                <ul class="server-stats">
+                    <li>
+                        <div class="key pull-right">CPU</div>
+                        <div class="stat">
+                            <div class="info">60% / 37&deg;C / 3.3 Ghz</div>
+                            <div class="progress progress-small progress-danger">
+                                <div class="bar" style="width: 35%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key pull-right">Mem</div>
+                        <div class="stat">
+                            <div class="info">29% / 4GB (16 GB)</div>
+                            <div class="progress progress-small">
+                                <div class="bar" style="width: 89%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key pull-right">LAN</div>
+                        <div class="stat">
+                            <div class="info">6 Mb/s <i class="icon-caret-down"></i> &nbsp; 3 Mb/s <i class="icon-caret-up"></i></div>
+                            <div class="progress progress-small progress-inverse">
+                                <div class="bar" style="width: 56%;"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="span2">
+        <section class="widget widget-overview">
+            <header>
+                <h4>
+                    <i class="icon-lightbulb"></i>
+                    Stats Overview
+                </h4>
+            </header>
+            <div class="body">
+                <ul class="overall-stats">
+                    <li>
+                        <div class="icon pull-left">
+                            <i class="icon-user"></i>
+                        </div>
+                        <span class="key">Total Users</span>
+                        <div class="value pull-right">
+                            <span class="badge badge-important">7 541</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon pull-left">
+                            <i class="icon-shopping-cart"></i>
+                        </div>
+                        <span class="key">Total Orders</span>
+                        <div class="value pull-right">
+                            <span class="badge">2 876</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon pull-left">
+                            <i class="icon-desktop"></i>
+                        </div>
+                        <span class="key">Desktop</span>
+                        <div class="value pull-right">
+                            <span class="badge badge-info">68%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon pull-left">
+                            <i class="icon-phone"></i>
+                        </div>
+                        <span class="key">Mobile</span>
+                        <div class="value pull-right">
+                            <span class="badge badge-success"><a href="http://www.hightheme.com">32%</a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>  
+<div class="span4">
+        <section class="widget normal">
+            <header>
+                <h4>
+                    <i class="icon-angle-right"></i>
+                    Some extensions
+                </h4>
+            </header>
+            <div class="body">
+                <h5 class="no-margin weight-normal">With embedded percentage</h5>
+                <div class="progress">
+                    <div class="bar" style="width: 79%;">79%</div>
+                </div>
+                <h5 class="no-margin weight-normal">Active one</h5>
+                <div class="progress progress-warning progress-striped active">
+                    <div class="bar" style="width: 51%;">51%</div>
+                </div>
+                <h5 class="no-margin weight-normal">Inversed progress-bar</h5>
+                <div class="progress progress-inverse progress-striped active">
+                    <div class="bar" style="width: 64%;">64%</div>
+                </div>
+            </div>
+        </section>
+    </div>              
+</div>
+<div class="content container-fluid">
+    <div class="row-fluid box-row">
+        <div class="span2">
+            <div class="box">
+                <div class="icon">
+                    <i class="icon-calendar"></i>
+                </div>
+                <div class="description">
+                    <strong>14</strong> meetings
+                </div>
+            </div>
+        </div>
+        <div class="span2">
+            <div class="box">
+                <div class="big-text">
+                    3.28%
+                </div>
+                <div class="description">
+                    <i class="icon-user"></i>
+                    User Growth
+                </div>
+            </div>
+        </div> 
+        <div class="span2">
+            <div class="box">
+                <div class="icon">
+                    <i class="icon-shopping-cart"></i>
+                </div>
+                <div class="description">
+                    <strong>4510</strong> orders
+                </div>
+            </div>
+        </div>
+        <div class="span2">
+            <div class="box">
+                <div class="big-text">
+                    6.42%
+                </div>
+                <div class="description">
+                    <i class="icon-arrow-right"></i>
+                    Traffic Growth
+                </div>
+            </div>
+        </div> 
+        <div class="span2 offset2">
+            <div class="box">
+                <div class="icon">
+                    <i class="icon-shopping-cart"></i>
+                </div>
+                <div class="description">
+                    <strong>410</strong> orders
+                </div>
+            </div>
+        </div>               
+    </div>
+</div>   
+      
+<!-- default jquery  -->
+<script src="popover/lib/jquery.1.9.0.min.js"> </script>
+<!--librairy -->
+<script src="popover/lib/underscore-min.js"></script>
+<!-- bootstrap default plugins -->
+<script src="popover/js/bootstrap/bootstrap-tooltip.js"></script>
+<script src="popover/js/bootstrap/bootstrap-popover.js"></script>
+<script src="popover/js/bootstrap/bootstrap-dropdown.js"></script>
+<!-- basic application js-->
+<script src="popover/js/settings.js"></script>
+<!-- bootstrap default plugins -->
+<script src="tab/js/bootstrap/bootstrap-tab.js"> </script>
+
+<script type="text/template" id="settings-template">
+    <div class="setting clearfix">
+        <div style="text-align:center">BACKGROUND</div>
+        <div>Classic</div>        
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% std = background == 'std'; classic = background == 'classic';%>
+            <button type="button" data-value="std"   title="Standard" class="btn btn-small btn-std btn-transparent<%= std? 'active' : '' %>"></button>
+            <button type="button" data-value="classic"  title="Classic"  class="btn btn-small btn-classic btn-transparent <%= classic? 'active' : '' %>"></button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Light</div>
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% orange = background == 'orange'; lighter = background == 'lighter';%>
+            <button type="button" data-value="orange"   title="Orange" class="btn btn-small btn-orange btn-transparent<%= orange? 'active' : '' %>"></button>
+            <button type="button" data-value="lighter"   title="Light" class="btn btn-small btn-lighter btn-transparent <%= lighter? 'active' : '' %>"></button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Dark</div>
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% darker = background == 'darker'; turquoise = background == 'turquoise';%>
+            <button type="button" data-value="darker"   title="Dark" class="btn btn-small btn-darker btn-transparent<%= darker? 'active' : '' %>"></button>
+            <button type="button" data-value="turquoise"   title="Turquoise" class="btn btn-small btn-turquoise btn-transparent <%= turquoise? 'active' : '' %>"></button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Famous</div>
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% emeraude = background == 'emeraude'; brown = background == 'brown';%>
+            <button type="button" data-value="emeraude"  title="Emeraude" class="btn btn-small btn-emeraude btn-transparent<%= emeraude? 'active' : '' %>"></button>
+            <button type="button" data-value="brown"  title="Gold" class="btn btn-small btn-brown btn-transparent<%= brown? 'active' : '' %>"></button>
+        </div>
+    </div>    
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+
+/* @import url(./font-awesome/css/font-awesome.min.css); */  /* contient tous les glyphicons */
+@import url(../css_gly/bootstrap-glyphicons.css);  /* contient tous les glyphicons */
+
+
+/* line 9, D:/projects/admin/sass/bootstrap-original/_scaffolding.scss */
+/* -----------------------------------------------------------------------------------------
+FORMAT OF THE TEXT INSIDE THE POPOVER  
+*/
+body {  /* define le format du texte dans le popover */ 
+  font-family   : "Open Sans", sans-serif;
+  line-height   : 20px;
+}
+
+/* line 22, D:/projects/admin/sass/bootstrap-original/_scaffolding.scss */
+/* -----------------------------------------------------------------------------------------
+TAKE OUT THE LITTLE WHITE BAR ON THE NEETH OF THE <SETTING-COLOR ICON>  
+*/
+a {  /* enleve la barre sous l'icon en doublon sans doute  */ 
+  color: #9bd0f6;
+  text-decoration: none;
+}
+/* line 37, D:/projects/admin/sass/_general.scss */
+/* -----------------------------------------------------------------------------------------
+PROPAGATION OF THE BACKGROUND COLOR ON ALL PAGE
+*/
+html {
+  min-height: 100%;
+}
+/* -----------------------------------------------------------------------------------------
+DEFINITION OF THE NAV OF SETTING-COLOR ICON AND HOVER STATUS  
+*/
+/* line 528, D:/projects/admin/sass/_base.scss */
+.page-header {
+  border            : none;
+  margin            : 15px 2.5641% 0;
+  padding           : 0;
+  position          : relative;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius : 1px;
+  -o-border-radius  : 1px;
+  border-radius     : 1px;
+}
+/* line 559, D:/projects/admin/sass/_base.scss */
+.page-header .nav > a {
+  color             : rgba(51, 51, 51, 0.5);
+  padding           : 0;
+  padding-left      : 12px; /* position of the setting-color icon in the span */
+  font-size         : 19.5px;  /*  size of the icon */
+  outline           : 0;
+  background        : none;
+  text-align        : center;
+  vertical-align    : middle;
+  line-height       : 30px;
+  text-shadow       : none;
+  -webkit-transition: color 0.1s;
+  -moz-transition   : color 0.1s;
+  -o-transition     : color 0.1s;
+  transition        : color 0.1s;
+}
+.page-header .nav > a:hover {
+  color: white;
+}
+
+/* line 41, D:/projects/admin/sass/_general.scss */
+/* -----------------------------------------------------------------------------------------
+DEFINITION OF THE DIFFERENTS BACKGROUND COLOR  
+*/
+
+body { /* classic */ 
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #333399, #A3A3D1, #E0E0F0), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #333399, #A3A3D1, #E0E0F0), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #333399, #A3A3D1, #E0E0F0), url("../img/bgnoise_lg_dark.png");
+}
+body.background-std {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoNTcsIDEyMywgMTM3LCAwLjk0KSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2OSwgMjEzLCAxODgsIDAuOTQpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDIyNSwgMjIwLCAxNTUsIDAuOTQpIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: rgba(57, 123, 137, 0.91);
+  background: radial-gradient(farthest-side ellipse at 10% 0, rgba(57, 123, 137, 0.91), rgba(169, 213, 188, 0.91), rgba(225, 220, 155, 0.91)), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, rgba(57, 123, 137, 0.91), rgba(169, 213, 188, 0.91), rgba(225, 220, 155, 0.91)), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(57, 123, 137, 0.91), rgba(169, 213, 188, 0.91), rgba(225, 220, 155, 0.91)), url("../img/bgnoise_lg_dark.png");
+}
+body.background-classic {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #333399, #A3A3D1, #E0E0F0), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #333399, #A3A3D1, #E0E0F0), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #333399, #A3A3D1, #E0E0F0), url("../img/bgnoise_lg_dark.png");
+}
+body.background-darker {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: rgba(102, 105, 104, 0.9);
+  background: radial-gradient(farthest-side ellipse at 10% 0, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9)), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9)), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9)), url("../img/bgnoise_lg_dark.png");
+}
+
+body.background-orange {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #FF9933, #A86E08, #D1821C), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #FF9933, #A86E08, #D1821C), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #FF9933, #A86E08, #D1821C), url("../img/bgnoise_lg_dark.png");
+}
+body.background-turquoise {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #FFFF99, #E6FFA3, #00FFFF), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #FFFF99, #E6FFA3, #00FFFF), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #FFFF99, #E6FFA3, #00FFFF), url("../img/bgnoise_lg_dark.png");
+}  
+body.background-brown {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #996633, #F5F005, #AD8529), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #996633, #F5F005, #AD8529), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #996633, #F5F005, #AD8529), url("../img/bgnoise_lg_dark.png");
+}
+body.background-emeraude {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #66A3A3, #E6F0F0, #006666), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #66A3A3, #E6F0F0, #006666), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #66A3A3, #E6F0F0, #006666), url("../img/bgnoise_lg_dark.png");
+}
+body.background-lighter {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #99CCFF, #F5FA75, #C2E0C2), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #99CCFF, #F5FA75, #C2E0C2), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #99CCFF, #F5FA75, #C2E0C2), url("../img/bgnoise_lg_dark.png");
+}
+
+
+/* line 6, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+/* -----------------------------------------------------------------------------------------
+DEFINITION OF THE POSITION OF THE POPOVER MODAL 
+*/
+.popover {
+  position            : absolute;
+  top                 : 0;
+  left                : 0;
+  z-index             : 1010;
+  display             : none;
+  max-width           : 176px;
+  padding             : 1px;
+  text-align          : left;
+  background-color    : rgba(51, 51, 51, 0.85);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip     : padding-box;
+  border              : 1px solid #ccc;
+  -webkit-border-radius: 6px;
+  -moz-border-radius  : 6px;
+  border-radius       : 6px;
+  -webkit-box-shadow  : 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow     : 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow          : 0 5px 10px rgba(0, 0, 0, 0.2);
+  white-space         : normal;
+}
+/* line 28, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.top {
+  margin-top: -10px;
+}
+/* line 29, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.right {
+  margin-left: 10px;
+}
+/* line 30, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.bottom {
+  margin-top: 10px;
+}
+/* line 31, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.left {
+  margin-left: -10px;
+}
+
+/* line 34, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover-title {
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  background-color: rgba(43, 43, 43, 0.85);
+  border-bottom: 1px solid rgba(31, 31, 31, 0.85);
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+/* line 44, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover-title:empty {
+  display: none;
+}
+
+/* line 49, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover-content {
+  padding: 9px 14px;
+}
+
+/* line 58, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover .arrow,
+.popover .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* line 66, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover .arrow {
+  border-width: 11px;
+}
+
+/* line 69, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover .arrow:after {
+  border-width: 10px;
+  content: "";
+}
+
+/* line 75, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.top .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-width: 0;
+  border-top-color: #999;
+  border-top-color: rgba(0, 0, 0, 0.25);
+  bottom: -11px;
+}
+/* line 82, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.top .arrow:after {
+  bottom: 1px;
+  margin-left: -10px;
+  border-bottom-width: 0;
+  border-top-color: rgba(51, 51, 51, 0.85);
+}
+/* line 89, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.right .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-left-width: 0;
+  border-right-color: #999;
+  border-right-color: rgba(0, 0, 0, 0.25);
+}
+/* line 96, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.right .arrow:after {
+  left: 1px;
+  bottom: -10px;
+  border-left-width: 0;
+  border-right-color: rgba(51, 51, 51, 0.85);
+}
+/* line 103, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.bottom .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  top: -11px;
+}
+/* line 110, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.bottom .arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  border-top-width: 0;
+  border-bottom-color: rgba(51, 51, 51, 0.85);
+}
+/* line 118, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.left .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999;
+  border-left-color: rgba(0, 0, 0, 0.25);
+}
+/* line 125, D:/projects/admin/sass/bootstrap-original/_popovers.scss */
+.popover.left .arrow:after {
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: rgba(51, 51, 51, 0.85);
+  bottom: -10px;
+}
+/* -----------------------------------------------------------------------------------------
+DEFINITION OF THE SETTING POPOVER MODAL 
+*/
+/* line 770, D:/projects/admin/sass/_base.scss */
+.settings-popover {  /* placement du modal sur l'ecran */
+  background            : rgba(51, 51, 51, 0.85);
+  -webkit-box-shadow    : none;
+  -moz-box-shadow       : none;
+  box-shadow            : none;
+  -webkit-border-radius : 0;
+  -moz-border-radius    : 0;
+  -ms-border-radius     : 0;
+  -o-border-radius      : 0;
+  border-radius         : 0;
+  border                : none;
+  color                 : white; /* title color */
+  width                 : 126px;
+  font-size             : 11.05px;
+  left                  : -53px !important; /* position align with the setting icon */
+  top                   : 30px !important;  /* position align with the setting icon */
+  text-align            : center;
+  margin-left           : 10px;
+}
+/* line 783, D:/projects/admin/sass/_base.scss */
+.settings-popover.bottom .arrow { /* Arrow position  */
+  border-bottom-color: transparent;
+  top: -13px;
+  margin-left: 0;
+  left: auto;
+  right: 50px;
+}
+/* line 789, D:/projects/admin/sass/_base.scss */
+.settings-popover.bottom .arrow:after {
+  border-bottom-color: rgba(51, 51, 51, 0.85);
+  border-width: 6px;
+}
+/* line 795, D:/projects/admin/sass/_base.scss */
+.settings-popover .btn-group {
+  margin-top: 0;
+}
+/* line 799, D:/projects/admin/sass/_base.scss */
+.settings-popover .btn-small { /* width of the buttons */
+  padding: 0 10px;
+}
+/* line 804, D:/projects/admin/sass/_base.scss */
+.setting {
+  font-weight: normal;
+}
+/* line 808, D:/projects/admin/sass/_base.scss */
+.setting + .setting { /* gap between each line */
+  margin-top: 5px;
+}
+/* -----------------------------------------------------------------------------------------
+DEFINITION OF THE POPOVER MODAL BUTTONS
+*/
+/* line 1114, D:/projects/admin/sass/_base.scss */
+.btn-std:hover, .btn-classic:hover, .btn-darker:hover, .btn-turquoise:hover, .btn-brown:hover, .btn-emeraude:hover, .btn-orange:hover, .btn-lighter:hover {
+  border: 2px solid rgba(51, 51, 51, 0.5);
+}
+/* line 191, D:/projects/admin/sass/_bootstrap-override.scss */
+.btn-std, .btn-darker, .btn-turquoise, .btn-brown, .btn-emeraude, .btn-orange, .btn-lighter{
+  border-color: #c5c5c5;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+  height:25px;
+  width: 45px;
+}
+/* -----------------------------------------------------------------------------------------
+DEFINITION OF THE COLOR'S BUTTONS - KEEP THE SAME AS BACKGROUND-COLOR 
+*/
+.btn-std {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoNTcsIDEyMywgMTM3LCAwLjk0KSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2OSwgMjEzLCAxODgsIDAuOTQpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDIyNSwgMjIwLCAxNTUsIDAuOTQpIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: rgba(57, 123, 137, 0.91);
+  background: radial-gradient(farthest-side ellipse at 10% 0, rgba(57, 123, 137, 0.91), rgba(169, 213, 188, 0.91), rgba(225, 220, 155, 0.91)), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, rgba(57, 123, 137, 0.91), rgba(169, 213, 188, 0.91), rgba(225, 220, 155, 0.91)), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(57, 123, 137, 0.91), rgba(169, 213, 188, 0.91), rgba(225, 220, 155, 0.91)), url("../img/bgnoise_lg_dark.png");
+}
+.btn-classic {
+  height:25px;
+  width: 45px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #333399, #A3A3D1, #E0E0F0), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #333399, #A3A3D1, #E0E0F0), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #333399, #A3A3D1, #E0E0F0), url("../img/bgnoise_lg_dark.png");
+}
+
+.btn-darker {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: rgba(102, 105, 104, 0.9);
+  background: radial-gradient(farthest-side ellipse at 10% 0, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9)), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9)), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9)), url("../img/bgnoise_lg_dark.png");
+}
+.btn-turquoise {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #FFFF99, #E6FFA3, #00FFFF), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #FFFF99, #E6FFA3, #00FFFF), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #FFFF99, #E6FFA3, #00FFFF), url("../img/bgnoise_lg_dark.png");
+}  
+.btn-brown {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #996633, #F5F005, #AD8529), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #996633, #F5F005, #AD8529), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #996633, #F5F005, #AD8529), url("../img/bgnoise_lg_dark.png");
+}
+.btn-emeraude {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #66A3A3, #E6F0F0, #006666), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #66A3A3, #E6F0F0, #006666), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #66A3A3, #E6F0F0, #006666), url("../img/bgnoise_lg_dark.png");
+}
+.btn-orange {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #FF9933, #A86E08, #D1821C), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #FF9933, #A86E08, #D1821C), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #FF9933, #A86E08, #D1821C), url("../img/bgnoise_lg_dark.png");
+}
+.btn-lighter {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTAyLCAxMDUsIDEwNCwgMC45MCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSg5MywgMTEyLCAxMTksIDAuODkpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE2MCwgMTc0LCAxNTAsIDAuOTApIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: #00FFFF;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #99CCFF, #F5FA75, #C2E0C2), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #99CCFF, #F5FA75, #C2E0C2), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, #99CCFF, #F5FA75, #C2E0C2), url("../img/bgnoise_lg_dark.png");
+}

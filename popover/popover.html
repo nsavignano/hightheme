@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Light Blue - Admin Template</title>
+    <link href="css/popover.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-dark">
+
+<style>
+
+</style> 
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+
+<div class="offset12">
+    <div class="span12">
+        <table border=0><tr><td>
+        <header class="page-header">
+        <div class="nav">
+        <a href="#" id="settings"
+           title="Settings"
+           data-toggle="popover"
+           data-placement="bottom">
+            <i><span class="glyphicon glyphicon-cog"></span></i>
+        </a>
+        </div> 
+        </header>
+        </td></tr></table>
+    <div>
+</div>
+
+<!-- jquery and friends -->
+<script src="lib/jquery.1.9.0.min.js"> </script>
+<!--backbone and friends -->
+<script src="lib/underscore-min.js"></script>
+<!-- bootstrap default plugins -->
+<script src="js/bootstrap/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap/bootstrap-popover.js"></script>
+<script src="js/bootstrap/bootstrap-dropdown.js"></script>
+<!-- basic application js-->
+<script src="js/settings.js"></script>
+
+<script type="text/template" id="settings-template">
+    <div class="setting clearfix">
+        <div style="text-align:center">BACKGROUND</div>
+        <div>Classic</div>        
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% std = background == 'std'; classic = background == 'classic';%>
+            <button type="button" data-value="std"   title="Standard" class="btn btn-small btn-std btn-transparent<%= std? 'active' : '' %>"></button>
+            <button type="button" data-value="classic"  title="Classic"  class="btn btn-small btn-classic btn-transparent <%= classic? 'active' : '' %>"></button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Light</div>
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% orange = background == 'orange'; lighter = background == 'lighter';%>
+            <button type="button" data-value="orange"   title="Orange" class="btn btn-small btn-orange btn-transparent<%= orange? 'active' : '' %>"></button>
+            <button type="button" data-value="lighter"   title="Light" class="btn btn-small btn-lighter btn-transparent <%= lighter? 'active' : '' %>"></button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Dark</div>
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% darker = background == 'darker'; turquoise = background == 'turquoise';%>
+            <button type="button" data-value="darker"   title="Dark" class="btn btn-small btn-darker btn-transparent<%= darker? 'active' : '' %>"></button>
+            <button type="button" data-value="turquoise"   title="Turquoise" class="btn btn-small btn-turquoise btn-transparent <%= turquoise? 'active' : '' %>"></button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Famous</div>
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% emeraude = background == 'emeraude'; brown = background == 'brown';%>
+            <button type="button" data-value="emeraude"  title="Emeraude" class="btn btn-small btn-emeraude btn-transparent<%= emeraude? 'active' : '' %>"></button>
+            <button type="button" data-value="brown"  title="Gold" class="btn btn-small btn-brown btn-transparent<%= brown? 'active' : '' %>"></button>
+        </div>
+    </div>    
+</script>
+
+</body>
+</html>
