@@ -1,0 +1,16 @@
+/* overwrite the source code */ 
+.easyPieChart {
+    position: relative;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.7);
+}
+.easyPieChart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* ----------------------- */
+.myeasypiechart {
+    float: left;
+    margin: 10px;
+}
