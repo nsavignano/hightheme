@@ -7,7 +7,7 @@ html, body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   min-height: 100%; 
-  overflow-x:hidden; /* just for small device */
+    overflow:scroll;  /* hidden */
 }
 body {
   margin: 0;
@@ -336,10 +336,25 @@ blockquote.pull-right-ns small {
   text-align: right;
 }
 /*  ------------------ BADGE ------------------- */
+.badge_fix {
+  min-width: 10px;
+  padding: 2px 3px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  color: blue;
+  /*#ffffff; */
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #999999;
+  border-radius: 10px;
+  margin-left: 0px;
+}
 .badge {
   display: inline-block;
   min-width: 10px;
-  padding: 3px 3px;
+  padding: 4px 3px;
   font-size: 8px;
   font-weight: bold;
   line-height: 1;
