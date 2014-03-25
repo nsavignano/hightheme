@@ -116,147 +116,51 @@ function init_box_color_strip()
 	}
 }
 
-function small_device_setting (theme) 
-{
-
-	var colour = new Array();
-	colour = settings.palette(); 
-
-	
-
-	// don’t download complicated script
-	// use low-source images instead of full-source ones
-	// $('.navbar-default').css('background',lightgray);		// Navbar
-	$('.navbar-default').css('background',colour[37]);		// Navbar
-	//$('.navbar-default').css('opacity','0.7');		// Navbar		
-	$('.header-txt').css('color',black);
-	$('.header-txt').mouseover(function () {	// Navbar style
-	      $(this).css('color', colour[23]); 
-	      $(this).css('border-top-color', colour[24]); 
-	      $(this).css('border-bottom-color', colour[25]);                   
-	});  
-	$('.header-txt').mouseleave(function () {	// Navbar style  caret
-	      $(this).css('color', colour[26]); 
-	      $(this).css('border-top-color', black); 
-	      $(this).css('border-bottom-color', black);                   
-	});		
-}
-
 function theme_settings(theme) {
 
+
+	$("section").removeClass("widget_blockquote");
+	//$('.sidebar-body').css('color',white);
+	//$('#hr_widget').hide();
+	//$('blockquote').css('border',inherit); 
+
+	if (theme == 'oceane') { 
+		$('.pull-right-ns').css('border', '2px groove #bbb');		
+		oceane_style(theme);
+		return;
+	}	
+	if (theme == 'talisman') { 
+		$('.sidebar-body').css('color',tlmgreen);		
+		$('.sidebar-body').css('color',tlmgreen);
+		talisman_style(theme);
+		return;
+	}
+	if (theme == 'turquoise') { 
+		$('.sidebar-body').css('color',tlmgreen);		
+		$('.sidebar-body').css('color',tlmgreen);
+		$('#hr_widget').show();		
+		turquoise_style(theme);
+		return;
+	}
+	if (theme == 'classic') { 
+		$('#hr_widget').show();
+		$('.sidebar-body').css('color',tlmgreen);				
+		$('.pull-right-ns > h1').css('color', lightblue);		
+		$('.sidebar-body').css('color',tlmgreen);
+		classic_style(theme);
+		return;
+	}
 
 	if (theme == 'sand') { 
 		$("section").addClass("widget_blockquote");
 		sand_style(theme);
 		return;
-	}
-	if (theme == 'oceane') { 
-		$("section").removeClass("widget_blockquote");
-		oceane_style(theme);
-		return;
-	}	
+	}		
 	if (theme == 'salmon') { 
 		$("section").addClass("widget_blockquote"); 
 		salmon_style(theme);
 		return;
 	}	
-	var colour = new Array();
-	settings.init(theme); // init this theme as a current one 
-
-	colour = settings.palette(); // grab the result of all colour based on the current theme choose			
-	// alert(colour[0]+':'+colour[1]+':'+colour[2]+':'+colour[3]+':'+colour[4]+':'+colour[5]+':'+colour[6]);
-	// body style
-	// $("body").addClass("background-"+theme);  
-	$('#'+theme).css('background-color',aliceblue); 
-	$('.widget').css('opacity','0.6'); // .active > a:focus
-	$('blockquote').css('border',inherit); 
-	$('#hr_widget').hide();
-	// differents particularity
-	// if ( (theme == 'talisman') || ((theme == 'light')) )  $('.widget').css('background-image','url("img/background.jpg")');
-	// Don't want stripe on widgets 
-	if ( (theme == 'talisman') ||  (theme == 'turquoise') || (theme == 'classic') )  { 
-		$('.sidebar-body').css('color',tlmgreen);	$("section").removeClass("widget_blockquote");
-	} else $('.sidebar-body').css('color',white);
-	if (theme == 'classic'){ $('.pull-right-ns > h1').css('color', lightblue); }
-	if (theme == 'oceane')  { $('.pull-right-ns').css('border', '2px groove #bbb'); } // $('blockquote').css('border','1px solid #999');
-	if ( (theme == 'classic') || (theme == 'turquoise') ) {  $('#hr_widget').show(); }
-	// ------------------------------------------------------------------------------------
-	
-	$("#brand-pre").css('color', colour[2]);	// prefix. Title of the company	
-	$("#brand-suf").css('color', colour[1]); 	// Suffix. Title of the company
-	$('.header-txt').css('color','colour[2]');	// Texte inside the navbar 
-	$(".tag").css('color', colour[3]); 			// First letter in the texte
-	$(".btn-default").css('color',colour[4]);	// button style
-	$('.badge').css('color', colour[5]); 		// bagde : little oval form
-	$('.square-badge').css('color',colour[6] ); // square inside the dropdown
-	$('.sidebar-heading').css('color', colour[7]);	// text Header Sidebar
-	$(".list-group-item").css('color', colour[8]);	// Text inside the sidebar
-
-	$('.navbar-default').css('background',colour[9]);		// Navbar
-	$(".widget").css('background-color', colour[10]); 		// Widget : texte inside the block
-	$('.btn-default').css("background-color",colour[11]);	// button style
-	$(".badge").css('background-color', colour[12]);		// bagde : little oval form
-	$('.square-badge').css('background-color',colour[13] );	// square inside the dropdown
-  	$(".list-group-item").css('background-color',colour[14] );	// Text inside the sidebar 
-
-	$('.btn-default').css('border','0.1px solid'+colour[15]);	// button style
-	$('.header-txt').css('border-top-color',colour[16]);		// Caret: Texte inside the navbar 
-	$('.dropdown-menu').css('border-top','2px solid '+colour[17]);	// le top of the drop down menu
-	$('.navbar-default').css('border-bottom-color',colour[18]); // Navbar	
-	$('.header-txt').css('border-bottom-color',colour[19]);		// Caret: Texte inside the navbar  
-	$('.pull-right-ns').css('border-right', '5px solid'+colour[20]);	//  blockquote : texte inside another kind of block  
-	$('.pull-left-ns').css('border-left', '5px solid'+colour[21]);  	//  blockquote : texte inside another kind of block  
-	$(".sidebar-heading").css('border-color',colour[22]); 				// header inside the navbar
-	$(".caret").css('border-top','12px solid'+colour[1]); 
-
-    $(".caret").hover(function() {
-      $(this).css('color', 'colour[23]'); 
-      $(this).css('border-top-color', 'colour[24]'); 
-      $(this).css('border-bottom-color', 'colour[24]');
-      },function(){
-	      $(this).css('color', 'colour[26]'); 
-      $(this).css('border-top-color', 'colour[27]'); 
-      $(this).css('border-bottom-color', 'colour[28]');
-    });
-
-	$('.header-txt').mouseover(function () {	// Navbar style
-	      $(this).css('color', 'colour[23]'); 
-	      $(this).css('border-top-color', colour[24]); 
-	      $(this).css('border-bottom-color', colour[25]);                   
-	});  
-	$('.header-txt').mouseleave(function () {	// Navbar style  caret
-	      $(this).css('color', colour[26]); 
-	      $(this).css('border-top-color', colour[27]); 
-	      $(this).css('border-bottom-color', colour[28]);                   
-	});
-	$(".btn-default").hover(function(){		// button style
-	  	$(this).css("background-color",colour[29]);
-		$(this).css('color',colour[30]);		  
-	  },function(){
-	  	$(this).css("background-color",colour[31]);
-		$(this).css('color',colour[32]);		  
-	});
-	$('a.list-group-item').mouseover(function () {  // Text inside the sidebar
-	      $(this).css('border-right','5px solid'+colour[33]); 
-	      $(this).css('background-color',colour[34]);                                   
-	});  
-	$('a.list-group-item').click(function () {  	// Text inside the sidebar
-	      $(this).css('border-right',colour[35]);  
-	      $(this).css('background-color',colour[36]);	
-	      // console.log('list-group-item');                                     
-	});
-
-	$('a.list-group-item').mouseleave(function () {  // Text inside the sidebar
-	      $(this).css('border-right',empty);  
-	      $(this).css('background-color',empty);	                                     
-	});	
-	$(".carousel .item").css('background-color',colour[34]); 				// header inside the navbar
-	$(".carousel-indicators .active").attr('background-color','#90EE90'); 				// header inside the navbar	
-	// console.log($('#sidebar'));
-	if (parseInt(document.documentElement.clientWidth) < 768) { 
-		//alert(document.documentElement.clientWidth);
-	    	small_device_setting(theme); // when starting
-	 }
 	 
 }  
 $(window).resize(function(e)
