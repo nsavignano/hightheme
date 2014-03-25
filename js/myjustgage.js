@@ -67,7 +67,7 @@ twt = new JustGage({
   valueFontColor : black,
   titleFontColor : '#66FF33',
   gaugeWidthScale: 0.8,  // 0 to 1.5 size of the gauge
-  labelFontColor : '#66FF33',
+  labelFontColor : '#FEFC08',
   showInnerShadow : true,
   shadowVerticalOffset : 5,
   shadowOpacity: 1,

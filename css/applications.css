@@ -277,6 +277,7 @@ body.background-talisman {
   border-width: 0px;
   -moz-border-radius-bottomright: 15px;
   border-bottom-right-radius: 15px; 
+  background-image: url("img/background.jpg");
   z-index:auto;
 }
 .widget h1 {
@@ -295,9 +296,9 @@ background: -o-linear-gradient(to bottom right,#999999,  black,#B2B2B2, #CCCCCC,
 background: -moz-linear-gradient(to bottom right,#999999,  black,#B2B2B2, #CCCCCC, #8C8C8C,#B2B2B2,black,#CCCCCC,white,#B2B2B2,#8C8C8C,black,#CCCCCC,white,#B2B2B2,#8C8C8C, black,#CCCCCC,#F2F2F2, #B2B2B2,#8C8C8C,black, #CCCCCC,  #E6E6E6,#8C8C8C,#B2B2B2, black,#CCCCCC,  #D9D9D9,#8C8C8C,#B2B2B2, black, #D9D9D9, #B2B2B2, #999999); 
 background: linear-gradient(to bottom right,#999999,  black,#B2B2B2, #CCCCCC, #8C8C8C,#B2B2B2,black,#CCCCCC,white,#B2B2B2,#8C8C8C,black,#CCCCCC,white,#B2B2B2,#8C8C8C, black,#CCCCCC,#F2F2F2, #B2B2B2,#8C8C8C,black, #CCCCCC,  #E6E6E6,#8C8C8C,#B2B2B2, black,#CCCCCC,  #D9D9D9,#8C8C8C,#B2B2B2, black, #D9D9D9, #B2B2B2, #999999); 
 }
-#widget_blockquote
+.widget_blockquote
 {
-height:220px;
+min-height:220px;
 background: -webkit-linear-gradient(to bottom right,#999999,  black,#B2B2B2, #CCCCCC, #8C8C8C,#B2B2B2,black,#CCCCCC,white,#B2B2B2,#8C8C8C,black,#CCCCCC,white,#B2B2B2,#8C8C8C, black,#CCCCCC,#F2F2F2, #B2B2B2,#8C8C8C,black, #CCCCCC,  #E6E6E6,#8C8C8C,#B2B2B2, black,#CCCCCC,  #D9D9D9,#8C8C8C,#B2B2B2, black, #D9D9D9, #B2B2B2, #999999);
 background: -o-linear-gradient(to bottom right,#999999,  black,#B2B2B2, #CCCCCC, #8C8C8C,#B2B2B2,black,#CCCCCC,white,#B2B2B2,#8C8C8C,black,#CCCCCC,white,#B2B2B2,#8C8C8C, black,#CCCCCC,#F2F2F2, #B2B2B2,#8C8C8C,black, #CCCCCC,  #E6E6E6,#8C8C8C,#B2B2B2, black,#CCCCCC,  #D9D9D9,#8C8C8C,#B2B2B2, black, #D9D9D9, #B2B2B2, #999999);
 background: -moz-linear-gradient(to bottom right,#999999,  black,#B2B2B2, #CCCCCC, #8C8C8C,#B2B2B2,black,#CCCCCC,white,#B2B2B2,#8C8C8C,black,#CCCCCC,white,#B2B2B2,#8C8C8C, black,#CCCCCC,#F2F2F2, #B2B2B2,#8C8C8C,black, #CCCCCC,  #E6E6E6,#8C8C8C,#B2B2B2, black,#CCCCCC,  #D9D9D9,#8C8C8C,#B2B2B2, black, #D9D9D9, #B2B2B2, #999999); 

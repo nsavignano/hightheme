@@ -146,14 +146,20 @@ function theme_settings(theme) {
 
 
 	if (theme == 'sand') { 
+		$("section").addClass("widget_blockquote");
 		sand_style(theme);
 		return;
 	}
 	if (theme == 'oceane') { 
+		$("section").removeClass("widget_blockquote");
 		oceane_style(theme);
 		return;
 	}	
-	
+	if (theme == 'salmon') { 
+		$("section").addClass("widget_blockquote"); 
+		salmon_style(theme);
+		return;
+	}	
 	var colour = new Array();
 	settings.init(theme); // init this theme as a current one 
 
@@ -168,8 +174,8 @@ function theme_settings(theme) {
 	// differents particularity
 	// if ( (theme == 'talisman') || ((theme == 'light')) )  $('.widget').css('background-image','url("img/background.jpg")');
 	// Don't want stripe on widgets 
-	if ( (theme == 'talisman') || (theme == 'salmon') || (theme == 'turquoise') || (theme == 'classic') )  { 
-		$('.sidebar-body').css('color',tlmgreen);	$('.widget').css('background-image','url("img/background.jpg")');
+	if ( (theme == 'talisman') ||  (theme == 'turquoise') || (theme == 'classic') )  { 
+		$('.sidebar-body').css('color',tlmgreen);	$("section").removeClass("widget_blockquote");
 	} else $('.sidebar-body').css('color',white);
 	if (theme == 'classic'){ $('.pull-right-ns > h1').css('color', lightblue); }
 	if (theme == 'oceane')  { $('.pull-right-ns').css('border', '2px groove #bbb'); } // $('blockquote').css('border','1px solid #999');
