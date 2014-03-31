@@ -7,7 +7,8 @@ var settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
     displaySidebar 	: 'fix',
     device 			: '',
     insideContainer	: 'large',
-    navbarState		: 'fix'
+    navbarState		: 'fix',
+    pattern 		: 'off'
 }
 
 /* Collapse and Extend the menubar when the page is < 768px) */
@@ -134,12 +135,26 @@ function navbar_toogle(index)
     }
  	settingsState.navbarState = navbarState;
 }
+function pattern_toogle(index) 
+{
+	var currentStatus 		= settingsState.pattern != undefined? 	settingsState.pattern : '';
+	var patternState 		= ((index != '')? 	index : ((currentStatus == '')? 'off' :  ((currentStatus == 'off')? 'on' : 'off')));
+	if (patternState == 'on') {
+		$('#pattern-set').html('Pattern Off');
+		$("section").addClass("widget_blockquote");		  				
+    } else {
+		$('#pattern-set').html('Pattern On');
+		$("section").removeClass("widget_blockquote");								
+    }
+ 	settingsState.pattern = patternState;
+}
 $(function()
 {
-    // OpenPage('sidebar/sidebar.html',2);  
- 	init_box_color_strip(); 		   
+    // OpenPage('sidebar/sidebar.html',2);  		   
 	navbar_toogle('fix');
 	sidebar_toogle('fix');
+	pattern_toogle('off');
+	init_box_color_strip();
 	inside_container('large');
   	load_style();
 });

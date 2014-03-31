@@ -1,4 +1,5 @@
-var twt, lkd, fck, ggl, min_0 = 45, max_0 = 52 , min_1 = 45, max_1 = 52 ,min_2 = 45, max_2 = 52 ,min_3 = 45, max_3 = 52,cycle = 3, count = 0;
+
+var  twt, lkd, fck, ggl, min_0 = 45, max_0 = 52 , min_1 = 45, max_1 = 52 ,min_2 = 45, max_2 = 52 ,min_3 = 45, max_3 = 52,cycle = 3, count = 0;
 
 setInterval(function(){
   twt.refresh(getRandomInt(min_0,max_0));
@@ -64,7 +65,7 @@ twt = new JustGage({
   value: getRandomInt(35, 50),
   min: 35,
   max: 500,
-  valueFontColor : black,
+  valueFontColor : '#000000',
   titleFontColor : '#66FF33',
   gaugeWidthScale: 0.8,  // 0 to 1.5 size of the gauge
   labelFontColor : '#FEFC08',
@@ -88,7 +89,7 @@ lkd = new JustGage({
   titleFontColor : "#00fff6",
   labelFontColor : '#00fff6',  
   showMinMax : false,
-  titleFontColor : black,
+  titleFontColor : '#000000',
   max:150,
   title:"Visitors",
   label:"Real-Time",

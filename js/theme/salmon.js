@@ -10,10 +10,14 @@ var salmon_shadow8 	= 'rgba(51, 51, 51, 0.8)';
 
 var salmon_white 		= '#fffffe';
 var salmon_green 		= '#83CCEA';
-var salmon_darkblue 	= '#4E728D';
+var salmon_dark_blue 	= '#4E728D';
 var salmon 				= '#F5CA96';
 var salmon_lightgray 	= '#F9F9F9';
-var salmon_dark 		= '#82745A'; 
+
+var salmon_grey_dark 		= '#82745A'; 
+var salmon_greige			= '#696969';
+var salmon_monumental_white = '#FFFAF0';
+var salmon_best_friends 	= '#FFA500';
 
 
 function salmon_navbar()
@@ -21,7 +25,7 @@ function salmon_navbar()
 	$("#brand-pre").css('color', salmon_white);	// prefix. Title of the company	
 	$("#brand-suf").css('color', salmon); 	// Suffix. Title of the company
 	$('.header-txt').css('color',salmon);	// Texte inside the navbar 
-	$('.navbar-default').css('background',salmon_dark);		// Navbar
+	$('.navbar-default').css('background',salmon_dark_blue);		// Navbar
 	$('.navbar-default').css('border-bottom-color',salmon_white); // Navbar	
 	$('.header-txt').css('border-bottom-color',salmon_white);		// Caret: Texte inside the navbar 
 	$('.header-txt').css('border-top-color',salmon_white);		// Caret: Texte inside the navbar 
@@ -68,11 +72,11 @@ function salmon_sidebar()
   	$(".list-group-item").css('background-color',salmon_shadow4);	// Text inside the sidebar 
 	$('a.list-group-item').mouseover(function () {  // Text inside the sidebar
 	      $(this).css('border-right','5px solid'+salmon_green); 
-	      $(this).css('background-color',salmon_dark);                                   
+	      $(this).css('background-color',salmon_dark_blue);                                   
 	});  
 	$('a.list-group-item').click(function () {  	// Text inside the sidebar
 	      $(this).css('border-right',salmon_green);  
-	      $(this).css('background-color',salmon_dark);	
+	      $(this).css('background-color',salmon_dark_blue);	
 	      // console.log('list-group-item');                                     
 	});
 
@@ -94,7 +98,7 @@ function salmon_button () {
 	});	
 }
 function salmon_badge(){
-	$('.badge').css('color', salmon_dark); 		// bagde : little oval form	
+	$('.badge').css('color', salmon_dark_blue); 		// bagde : little oval form	
 	$(".badge").css('background-color', salmon_green);		// bagde : little oval form
 	$('.square-badge').css('background-color',salmon_green );	// square inside the dropdown
 	$('.square-badge').css('color',salmon_white ); // square inside the dropdown		
@@ -137,7 +141,7 @@ function salmon_small_device_setting ()
 	$('.header-txt').css('color',black);
 	$('.header-txt').mouseover(function () {	// Navbar style
 	      $(this).css('color', salmon_green); 
-	      $(this).css('border-top-color', salmon_dark); 
+	      $(this).css('border-top-color', salmon_dark_blue); 
 	      $(this).css('border-bottom-color', salmon_white);                   
 	});  
 	$('.header-txt').mouseleave(function () {	// Navbar style  caret

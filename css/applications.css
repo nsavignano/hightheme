@@ -7,7 +7,7 @@ html, body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   min-height: 100%; 
-    overflow:scroll;  /* hidden */
+  overflow:scroll; /* hidden = full screen */ /* scroll = Cell phone */
 }
 body {
   margin: 0;
@@ -683,8 +683,9 @@ font-family:"Times New Roman",Times,serif;
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 768px) {
 
-
-
+  html, body {
+    overflow:scroll;  /* hidden = full screen */ /* scroll = Cell phone */
+  }
   #sidebar {
     display: block;
     width: 120px;
@@ -714,6 +715,9 @@ font-family:"Times New Roman",Times,serif;
   }
 }
 @media (min-width: 992px) {
+  html, body {
+    overflow:scroll;  /* hidden = full screen */ /* scroll = Cell phone */
+  }  
    #sidebar {
     display: block;
     width: 150px;
@@ -739,6 +743,9 @@ font-family:"Times New Roman",Times,serif;
   }
 } /* end min - 992px */ 
 @media (min-width: 1200px) {
+  html, body {
+    overflow:visible;  /* hidden = full screen */ /* scroll = Cell phone */
+  }   
    #sidebar {
     display: block;
     width: 200px; 

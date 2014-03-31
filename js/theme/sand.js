@@ -9,11 +9,14 @@ var sand_shadow6 	= 'rgba(51, 51, 51, 0.6)';
 var sand_shadow8 	= 'rgba(51, 51, 51, 0.8)';
 
 var sand_white 		= '#fffffe';
-var sand_green 		= '#A3D114';
 var sand 			= '#F5CA96';
 var sand_lightgray 	= '#F9F9F9';
 var sand_dark 		= '#82745A'; 
 
+var sand_green 		= '#A3D114';
+var sand_kraft 		= '#DEB887';
+var sand_cinnamon 	= '#CD853F';
+var sand_maple 		= '#A6522D'; 
 
 
 function sand_navbar()
