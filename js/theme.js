@@ -58,7 +58,45 @@ var shadow4 	= 'rgba(51, 51, 51, 0.4)';
 var shadow6 	= 'rgba(51, 51, 51, 0.6)';
 var shadow8 	= 'rgba(51, 51, 51, 0.8)';
 
-function hover_caret_navbar (color, hover)
+function color_title(prefix, suffix)
+{
+	$("#brand-pre").css('color', prefix);				// prefix. Title of the company	
+	$("#brand-suf").css('color', suffix); 	// Suffix. Title of the company
+}
+function color_navbar(back, border)
+{
+
+	$('.navbar-default').css('background',back);			// Navbar
+	$('.navbar-default').css('border-bottom-color',border); // Navbar
+	$('.dropdown-menu').css('border-top','2px solid '+border);	// le top of the drop down menu
+}
+/* 2D / 3D Box inside the dropdown Menu bar */
+function color_square_badge(color, back)
+{
+	$('.square-badge').css('color',color ); // square inside the dropdown
+	$(".square-badge").css('background-color', back);		// bagde : little oval form
+}
+/* Badge on Menu Bar and side bar */
+function color_badge(color, back)
+{
+	$('.badge').css('color', color); 		// badge : little oval form	
+    $('.badge').css('background-color', back); 	
+}
+/* Widget Style */
+function color_widget(shadow) {
+	$('.widget').css('opacity','0.6'); // .active > a:focus
+	$(".widget").css('background-color', shadow); 		// Widget : texte inside the block	
+}
+/* Blockquote Style */
+function color_blockquote(color ,solid, border ) {
+	$('blockquote').css('border',inherit); 
+	$('.pull-left-ns > a > h1').css('color', color);	
+  	if (border) $('.pull-right-ns').css('border', '2px groove #bbb'); 
+	$('.pull-left-ns').css('border-left', '5px solid'+solid);  	
+	$('.pull-right-ns').css('border-right', '5px solid'+solid);	//  frame around the blockquote
+		
+}
+function color_hover_caret_navbar (color, hover)
 {
 
 	$(".caret").css('border-top','12px solid'+color);
@@ -73,7 +111,7 @@ function hover_caret_navbar (color, hover)
     });	 
 }
 /* Title inside the menu bar */
-function hover_inside_navbar(color, hover)
+function color_hover_inside_navbar(color, hover)
 {
 
 	$('.hidden-phone').css('color',color);
@@ -88,7 +126,7 @@ function hover_inside_navbar(color, hover)
     });	
 }
 /*  Button Style */
-function hover_button (color, hover) {
+function color_hover_button (color, hover) {
 	$(".btn-default").css('color',color);	// button style	
 	$('.btn-default').css("background-color",shadow4);	// button style	
 	$('.btn-default').css('border','0.1px solid'+color);	// button style	
@@ -100,10 +138,11 @@ function hover_button (color, hover) {
 		$(this).css('color',color);		  
 	});	
 }
-function hover_sidebar(color, hover, click)
+function color_hover_sidebar(color, hover, click)
 {
-	$(".sidebar-heading").css('border-color',hover); 		// header inside the navbar	
-	$(".list-group-item").css('color', color);			// Sidebar	Title
+	$('.sidebar-heading').css('color', color);				// text Header Sidebar
+	$(".sidebar-heading").css('border-color',hover); 		// line under the text Hearder	
+	$(".list-group-item").css('color', color);				// Sidebar	Title
   	$(".list-group-item").css('background-color',shadow4);	 
   
 	$('a.list-group-item').click(function () {  	// Text inside the sidebar
@@ -112,13 +151,21 @@ function hover_sidebar(color, hover, click)
 	});
     $("a.list-group-item").hover(function() {
 	      $(this).css('border-right','5px solid'+hover); 
-	      $(this).css('background-color',classic_lullaby);  
+	      $(this).css('background-color',click);  
 	      $(this).css('color',hover);
       },function(){
 	      $(this).css('border-right',empty);  
 	      $(this).css('background-color',empty);
 	     $(".list-group-item").css('color', color);
     });	
+}
+function set_box_color_strip(id)
+{
+	$('#'+id).css('background-color',aliceblue);
+}
+function color_first_char(color)
+{
+	$(".tag").css('color', color); 			// First letter in the texte
 }
 function init_box_color_strip()
 {
@@ -153,13 +200,11 @@ function init_box_color_strip()
 function theme_settings(theme) {
 
 
-	if (theme == 'oceane') { 
-		$('.pull-right-ns').css('border', '2px groove #bbb');		
+	if (theme == 'oceane') { 		
 		oceane_style();
 		return;
 	}	
-	if (theme == 'salmon') { 
-		//$("section").addClass("widget_blockquote"); 
+	if (theme == 'salmon') {  
 		salmon_style();
 		return;
 	}
@@ -171,13 +216,10 @@ function theme_settings(theme) {
 		talisman_style();
 		return;
 	}	
-	if (theme == 'turquoise') { 
-		//$('#hr_widget').show();		
+	if (theme == 'turquoise') { 		
 		turquoise_style();
 		return;
-	}
-	// By default classic		
-	//$('#hr_widget').show();				
+	}			
 	classic_style();
 
 }  

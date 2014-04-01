@@ -19,9 +19,7 @@ function treeD_setting(flag) {
 	settingsState.effect3D = settingsState.effect3D != undefined? 	flag : false;
 	localStorage.setItem("settings-state", JSON.stringify(settingsState)); 
 
-    var style 		= settingsState.background;
-    var colour 		= $('.square-badge').css('color');
-    var background 	= $('.square-badge').css('background-color');    
+    var style 		= settingsState.background; 
     var shadow 		= 'square-badge ';
     var navbar 		= '';
     var widget 		= '';
@@ -57,7 +55,6 @@ function treeD_setting(flag) {
 
 	$('#text3D').html(text3D);	
 	$('#theme-id').html('<li class="dropdown-header text_line">Theme: <strong class="'+shadow4+'" style="font-size:14px">'+style+'<strong></li>');
-	$('.square-badge').css('color', colour);
-	$('.square-badge').css('background-color', background);	
-	
+
+
 }
