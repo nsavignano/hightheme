@@ -54,7 +54,5 @@ function treeD_setting(flag) {
 	//$('.widget').css("border-bottom",border);	
 
 	$('#text3D').html(text3D);	
-	$('#theme-id').html('<li class="dropdown-header text_line">Theme: <strong class="'+shadow4+'" style="font-size:14px">'+style+'<strong></li>');
-
 
 }

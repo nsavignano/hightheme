@@ -151,6 +151,12 @@ body.background-talisman {
   background: -moz-radial-gradient(10% 0, farthest-side ellipse, #879180, #D6E6CB, #D6E6CB), url("../img/background.jpg");  
   background: radial-gradient(farthest-side ellipse at 10% 0, #879180, #D6E6CB 40%, #D6E6CB), url("../img/background.jpg");       
 }
+.background-pattern {
+left:0px;
+top:0px;
+z-index:-1;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAG0lEQVQYlWMw35z+nxjMcOzxxf+E8KhC6ikEAIjtRUmHWTQWAAAAAElFTkSuQmCC) repeat;
+}
 /* Colours Panel  */
 .orange         {background-color: #FF9933;}
 .ivoire         {background-color: #FFEBCC;}
@@ -218,7 +224,7 @@ body.background-talisman {
 .sidebar-body {
   padding-left: 10px;
 }
-.starter-template {
+.starter-template_old {
   padding: 70px 15px;
 }
 .navbar-nav {

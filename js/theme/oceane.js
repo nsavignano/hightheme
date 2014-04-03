@@ -42,7 +42,8 @@ function oceane_style()
 
 	color_hover_inside_navbar(oceane, oceane_red);
 	color_hover_caret_navbar(oceane, oceane_red);	
-	color_hover_sidebar(oceane_lightgray, oceane_red, oceane_dark);
+	var shadow =  $(".list-group-item").css('background-color');
+	color_hover_sidebar(oceane_lightgray, oceane_red, oceane_dark, shadow);
 	color_hover_button (oceane_red, oceane_white);
 
 	color_badge(oceane_white,oceane_red);

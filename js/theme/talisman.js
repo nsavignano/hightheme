@@ -19,8 +19,9 @@ function talisman_style()
 	color_navbar(shadow4, talisman_dark);
 
 	color_hover_inside_navbar(talisman_dark, talisman_fire_station);
-	color_hover_caret_navbar(talisman_fire_station, talisman_white);	
-	color_hover_sidebar(talisman, talisman_fire_station, talisman_mandarin_orange); 
+	color_hover_caret_navbar(talisman_fire_station, talisman_white);
+	var shadow =  $(".list-group-item").css('background-color');	
+	color_hover_sidebar(talisman, talisman_fire_station, talisman_mandarin_orange, shadow); 
 	color_hover_button (talisman_fire_station, talisman_white);
 
 	color_badge(talisman_dark,talisman_mandarin_orange);

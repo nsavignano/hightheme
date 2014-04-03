@@ -4,11 +4,8 @@ var settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
     background 		: 'classic',
     sidebarState 	: 'auto',
 	effect3D 		: false,    
-    displaySidebar 	: 'fix',
     device 			: '',
-    insideContainer	: 'large',
-    navbarState		: 'fix',
-    pattern 		: 'off'
+    insideContainer	: 'large'
 }
 
 /* Collapse and Extend the menubar when the page is < 768px) */
@@ -106,55 +103,103 @@ function inside_container(index)
 }
 function sidebar_toogle(index) 
 {
-
-	var currentStatus 		= settingsState.displaySidebar != undefined? 	settingsState.displaySidebar : '';
-	var displaySidebar 		= ((index != '')? 	index : ((currentStatus == '')? 'fix' :  ((currentStatus == 'fix')? 'static' : 'fix'))); 
-
-	if (displaySidebar == 'static') {
-		$('#sidebar-set').html('Fixed Sidebar'); // Toogle info 
-		$("#sidebar-affix").removeClass('sidebar_fix');
-		$("#sidebar-affix").addClass('sidebar_rel'); 					
-    } else {
-		$('#sidebar-set').html('Static Sidebar');  // Toogle info 
+	var currentStatus = getCookie('sidebarStatus') != undefined? 	getCookie('sidebarStatus') : '';
+	// Display the current value on Menu bar
+	if (currentStatus == 'fix') {
+		$('#sidebar-set').html('Static Sidebar'); // Toogle info 
 		$("#sidebar-affix").removeClass('sidebar_rel');
-		$("#sidebar-affix").addClass('sidebar_fix');				
-    }
-	settingsState.displaySidebar = displaySidebar;     
+		$("#sidebar-affix").addClass('sidebar_fix');							
+    } else {
+		$('#sidebar-set').html('Fixed Sidebar');  // Toogle info 
+		$("#sidebar-affix").removeClass('sidebar_fix');		
+		$("#sidebar-affix").addClass('sidebar_rel'); 						
+    }	
+    if (index == '' ) return; 				// this is true when loading page
+	if (index == 'toogle') 	currentStatus = (currentStatus == 'fix')? 'static' : 'fix'; // click on menubar to change
+					
+	setCookie('sidebarStatus', currentStatus); // new value or the same one
+	// Switch Value on Menu Bar and Modify the configuration
+	if (currentStatus == 'static') {
+		$("#sidebar-affix").removeClass('sidebar_fix');
+		$("#sidebar-affix").addClass('sidebar_rel'); 
+		$('#sidebar-set').html('Fixed Sidebar');  // Toogle info 							
+    } else {
+		$("#sidebar-affix").removeClass('sidebar_rel');
+		$("#sidebar-affix").addClass('sidebar_fix');
+    	$('#sidebar-set').html('Static Sidebar'); // Toogle info 					
+    }   
 }
 function navbar_toogle(index) 
 {
-	var currentStatus 		= settingsState.navbarState != undefined? 	settingsState.navbarState : '';
-	var navbarState 		= ((index != '')? 	index : ((currentStatus == '')? 'fix' :  ((currentStatus == 'fix')? 'static' : 'fix')));
-
-	if (navbarState == 'static') {
+	var currentStatus = getCookie('navbarStatus') != undefined? 	getCookie('navbarStatus') : 'fix';
+	// Display the current value on Nav bar
+	if (currentStatus == 'fix') {
 		$('#navbar-set').html('Static Header');
-		$("#navbar").addClass('navbar_fix');			  				
+		$("#navbar").addClass('navbar_fix');
+		$(".starter-template").css('margin-top','72px');						
     } else {
 		$('#navbar-set').html('Fixed Header');
-		$("#navbar").removeClass('navbar_fix');
-		$("#navbar").css('margin-bottom','-52px');								
-    }
- 	settingsState.navbarState = navbarState;
+		$("#navbar").removeClass('navbar_fix');	
+		$(".starter-template").css('margin-top','10px');						
+    }	
+    if (index == '' ) return; 				// this is true when loading page
+	if (index == 'toogle') 	currentStatus = (currentStatus == 'fix')? 'static' : 'fix'; // click on menubar to change
+					
+	setCookie('navbarStatus', currentStatus); // new value or the same one
+	// Switch Value on Nav Bar and Modify the configuration
+	if (currentStatus == 'fix') {
+		$('#navbar-set').html('Static Header');
+		$("#navbar").addClass('navbar_fix');
+		$(".starter-template").css('margin-top','72px');							
+    } else {
+		$('#navbar-set').html('Fixed Header');
+		$("#navbar").removeClass('navbar_fix');	
+		$(".starter-template").css('margin-top','10px');					
+    }  	
 }
 function pattern_toogle(index) 
 {
-	var currentStatus 		= settingsState.pattern != undefined? 	settingsState.pattern : '';
-	var patternState 		= ((index != '')? 	index : ((currentStatus == '')? 'off' :  ((currentStatus == 'off')? 'on' : 'off')));
-	if (patternState == 'on') {
+
+	var currentStatus = getCookie('patternStatus') != undefined? 	getCookie('patternStatus') : 'on';
+	// Display the current value on Nav bar
+	if (currentStatus == 'on') {
 		$('#pattern-set').html('Pattern Off');
-		$("section").addClass("widget_blockquote");		  				
+		$("section").addClass("widget_blockquote");	
+		$("html").addClass("background-pattern ");	
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);							
     } else {
 		$('#pattern-set').html('Pattern On');
-		$("section").removeClass("widget_blockquote");								
-    }
- 	settingsState.pattern = patternState;
+		$("section").removeClass("widget_blockquote");	
+		$("html").removeClass("background-pattern ");	
+		change_hover_sidebar(shadow4);	
+		color_widget(shadow4);						
+    }	
+    if (index == '' ) return; 				// this is true when loading page
+	if (index == 'toogle') 	currentStatus = (currentStatus == 'on')? 'off' : 'on'; // click on menubar to change
+					
+	setCookie('patternStatus', currentStatus); // new value or the same one
+	// Switch Value on Nav Bar and Modify the configuration
+	if (currentStatus == 'off') {
+		$('#pattern-set').html('Pattern On');
+		$("section").removeClass("widget_blockquote");	
+		$("html").removeClass("background-pattern ");	
+		change_hover_sidebar(shadow4);	
+		color_widget(shadow4);							
+    } else {
+		$('#pattern-set').html('Pattern Off');
+		$("section").addClass("widget_blockquote");	
+		$("html").addClass("background-pattern ");	
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);						
+    }  	
 }
 $(function()
 {
     // OpenPage('sidebar/sidebar.html',2);  		   
-	navbar_toogle('fix');
-	sidebar_toogle('fix');
-	pattern_toogle('off');
+	navbar_toogle('');
+	sidebar_toogle('');
+	pattern_toogle('');
 	init_box_color_strip();
 	inside_container('large');
   	load_style();

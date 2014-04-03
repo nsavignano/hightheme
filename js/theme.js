@@ -84,7 +84,7 @@ function color_badge(color, back)
 }
 /* Widget Style */
 function color_widget(shadow) {
-	$('.widget').css('opacity','0.6'); // .active > a:focus
+ 	$('.widget').css('opacity','0.8'); // .active > a:focus
 	$(".widget").css('background-color', shadow); 		// Widget : texte inside the block	
 }
 /* Blockquote Style */
@@ -138,12 +138,20 @@ function color_hover_button (color, hover) {
 		$(this).css('color',color);		  
 	});	
 }
-function color_hover_sidebar(color, hover, click)
+function change_hover_sidebar(shadow)
+{
+	var color = $('.sidebar-heading').css('color');
+	var hover = $(".sidebar-heading").css('border-color');
+	var click = $('a.list-group-item').css('background-color');
+	color_hover_sidebar(color, hover, click, shadow);	
+}
+function color_hover_sidebar(color, hover, click, shadow)
 {
 	$('.sidebar-heading').css('color', color);				// text Header Sidebar
 	$(".sidebar-heading").css('border-color',hover); 		// line under the text Hearder	
 	$(".list-group-item").css('color', color);				// Sidebar	Title
-  	$(".list-group-item").css('background-color',shadow4);	 
+  	$(".list-group-item").css('background-color',shadow);	
+	$(".panel-default").css('background-color',shadow);  	 
   
 	$('a.list-group-item').click(function () {  	// Text inside the sidebar
 	      $(this).css('border-right',click);  
@@ -154,8 +162,8 @@ function color_hover_sidebar(color, hover, click)
 	      $(this).css('background-color',click);  
 	      $(this).css('color',hover);
       },function(){
-	      $(this).css('border-right',empty);  
-	      $(this).css('background-color',empty);
+	      $(this).css('border-right',shadow);  
+	      $(this).css('background-color',shadow);
 	     $(".list-group-item").css('color', color);
     });	
 }
@@ -199,6 +207,8 @@ function init_box_color_strip()
 
 function theme_settings(theme) {
 
+	$('#theme-id').html('<li class="dropdown-header text_line">Theme: <strong class="'+shadow4+'" style="font-size:14px">'+theme+'<strong></li>');
+	$('#pattern-id').html('<li class="dropdown-header text_line">Pattern: <strong class="'+shadow4+'" style="font-size:14px"><strong></li>');
 
 	if (theme == 'oceane') { 		
 		oceane_style();

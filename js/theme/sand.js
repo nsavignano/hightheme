@@ -16,8 +16,9 @@ function sand_style()
 	color_navbar(sand_dark, sand_white); // sand_green
 
 	color_hover_inside_navbar(sand, sand_green);
-	color_hover_caret_navbar(sand, sand_green);	
-	color_hover_sidebar(sand, sand_green, sand_dark); // sand_lightgray
+	color_hover_caret_navbar(sand, sand_green);
+	var shadow =  $(".list-group-item").css('background-color');	
+	color_hover_sidebar(sand, sand_green, sand_dark, shadow);
 	color_hover_button (sand_green, sand_white);
 
 	color_badge(sand_white,sand_green);

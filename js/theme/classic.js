@@ -21,8 +21,9 @@ function classic_style()
 	color_navbar(classic_inspiration, classic_inspiration);
 
 	color_hover_inside_navbar(classic_blue, classic_lullaby);
-	color_hover_caret_navbar(classic_blue, classic_lullaby);	
-	color_hover_sidebar(classic_lightgray, classic_blue, classic_lightblue);
+	color_hover_caret_navbar(classic_blue, classic_lullaby);
+	var shadow =  $(".list-group-item").css('background-color');	
+	color_hover_sidebar(classic_lightgray, classic_blue, classic_lightblue, shadow);
 	color_hover_button (classic_lightgray, classic_blue);
 
 	color_badge(classic_blue,classic_lullaby);

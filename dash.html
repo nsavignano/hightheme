@@ -54,9 +54,16 @@
           <a  id="drop-toggle" href="#" class="dropdown-toggle visible-phone" data-toggle="dropdown"><b class="caret"></b></a>
           <ul id="drop-menu" class="dropdown-menu" role="menu">
             <li><a id="navbar-inside" href="#"  onclick="inside_container('')"></a></li>
-            <li><a id="navbar-set" href="#"     onclick="navbar_toogle('')"></a></li>
-            <li><a id="sidebar-set" href="#"    onclick="sidebar_toogle('')"></a></li>
-            <li><a id="pattern-set" href="#"    onclick="pattern_toogle('')"></a></li>            
+            <li><a id="navbar-set" href="#"     onclick="navbar_toogle('toogle')"></a></li>
+            <li><a id="sidebar-set" href="#"    onclick="sidebar_toogle('toogle')"></a></li>
+            <li><a id="pattern-set" href="#"    onclick="pattern_toogle('toogle')"></a></li> 
+            <li class="divider"></li>
+            <div id="pattern-id"></div>  
+            <li style="margin-bottom:40px">
+            <div id="classic" title="Classic" class="div-btn" onclick="change_style('classic');">
+            <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
+            </div>
+            </li>                            
             <li class="divider"></li>
             <div id="theme-id"></div>
             <li>
@@ -253,6 +260,7 @@
 <script src="bootstrap-3.1.1/js/popover.js"></script>
 -->
 <!-- my jquery plugins -->
+<script src="js/cookies.js"></script>
 <script src="js/theme/classic.js"></script>
 <script src="js/theme/oceane.js"></script>
 <script src="js/theme/salmon.js"></script>

@@ -26,8 +26,9 @@ function turquoise_style()
 	color_navbar(shadow4, turquoise);
 
 	color_hover_inside_navbar(turquoise, turquoise_green);
-	color_hover_caret_navbar(turquoise, turquoise_green);	
-	color_hover_sidebar(turquoise, turquoise_green, turquoise_dark); 
+	color_hover_caret_navbar(turquoise, turquoise_green);
+	var shadow =  $(".list-group-item").css('background-color');	
+	color_hover_sidebar(turquoise, turquoise_green, turquoise_dark, shadow); 
 	color_hover_button (turquoise_green, turquoise_white);
 
 	color_badge(turquoise_dark,turquoise_green);

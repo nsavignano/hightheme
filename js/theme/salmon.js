@@ -18,8 +18,9 @@ function salmon_style()
 	color_navbar(salmon, sand_white);
 
 	color_hover_inside_navbar(salmon_white, salmon_blue);
-	color_hover_caret_navbar(salmon_blue, salmon_white);	
-	color_hover_sidebar(salmon_white, salmon_blue, salmon_grey_dark); 
+	color_hover_caret_navbar(salmon_blue, salmon_white);
+	var shadow =  $(".list-group-item").css('background-color');	
+	color_hover_sidebar(salmon_white, salmon_blue, salmon_grey_dark, shadow); 
 	color_hover_button (salmon_blue, salmon_white);
 
 	color_badge(salmon_dark_blue,salmon_blue);
