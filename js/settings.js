@@ -28,7 +28,8 @@ function change_style(style)
 		var background 			= settingsState.background != undefined? 	settingsState.background : '';
 		var effect3D 			= settingsState.effect3D != undefined? 		settingsState.effect3D : false;
 		var background_device 	= settingsState.device != undefined? 		settingsState.device : '';
-
+		// if select one theme, have to remove Pattern if so
+		if (style != '') change_pattern(10);
 		if ( (style == '') && (background == '') ) style = 'classic';
 		else if ( (style == '') && (background != '') ) style = background;
 		else { 
@@ -157,23 +158,87 @@ function navbar_toogle(index)
 		$(".starter-template").css('margin-top','10px');					
     }  	
 }
+
+function change_pattern(id) 
+{
+
+	var patternItem = getCookie('patternItem') != undefined? 	getCookie('patternItem') : '';
+	if (patternItem != '') $("html").removeClass(patternItem);
+
+	if (id == '') id = patternItem;
+	
+	if (id == "pattern-green") { 
+		$("html").addClass("pattern-green"); // pattern-green
+		color_widget(shadow8);			
+		change_hover_sidebar(shadow8);	
+		patternItem = 	"pattern-green";
+	} else if (id == "pattern-blue") { // pattern-blue
+		$("html").addClass("pattern-blue");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);	
+		patternItem = 	"pattern-blue";			
+ 	} else if (id == "pattern-strip") {  // pattern-strip
+		$("html").addClass("pattern-strip");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);	
+	} else if (id == "pattern-grey") { // pattern-grey
+		$("html").addClass("pattern-grey");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);	
+		patternItem = 	"pattern-grey";			
+ 	} else if (id == "pattern-cross") {  // pattern-strip
+		$("html").addClass("pattern-cross");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);		
+		patternItem = 	"pattern-cross";	
+ 	} else if (id == "pattern-bleu-stripes") { // pattern-bleu-stripes
+		$("html").addClass("pattern-bleu-stripes");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);	
+		patternItem = 	"pattern-bleu-stripes";
+ 	} else if (id == "pattern-blue-print") {  // pattern-blue-print
+		$("html").addClass("pattern-blue-print");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);	
+		patternItem = 	"pattern-blue-print";
+ 	} else if (id == "pattern-argyle") {  // pattern-argyle
+		$("html").addClass("pattern-argyle");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);	
+		patternItem = 	"pattern-argyle";
+ 	} else if (id == "pattern-upholstery") { // 
+		$("html").addClass("pattern-upholstery");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);	
+		patternItem = 	"pattern-upholstery";
+ 	} else if (id == "pattern-stripes") {  // pattern-tiles
+		$("html").addClass("pattern-stripes");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);	
+		patternItem = 	"pattern-stripes";
+ 	} else if (id == "pattern-weave") {  // pattern-waves
+		$("html").addClass("pattern-weave");
+		change_hover_sidebar(shadow8);
+		color_widget(shadow8);	
+		patternItem = 	"pattern-weave";		
+	} else {
+		change_hover_sidebar(shadow4);
+		color_widget(shadow4);
+		patternItem = 	"";			
+	}
+	setCookie('patternItem', patternItem); // new value or the same one
+}
 function pattern_toogle(index) 
 {
 
 	var currentStatus = getCookie('patternStatus') != undefined? 	getCookie('patternStatus') : 'on';
 	// Display the current value on Nav bar
 	if (currentStatus == 'on') {
-		$('#pattern-set').html('Pattern Off');
-		$("section").addClass("widget_blockquote");	
-		$("html").addClass("background-pattern ");	
-		change_hover_sidebar(shadow8);
-		color_widget(shadow8);							
+		$('#pattern-set').html('Widget Pattern Off');
+		$("section").addClass("widget_blockquote");								
     } else {
-		$('#pattern-set').html('Pattern On');
-		$("section").removeClass("widget_blockquote");	
-		$("html").removeClass("background-pattern ");	
-		change_hover_sidebar(shadow4);	
-		color_widget(shadow4);						
+		$('#pattern-set').html('Widget Pattern On');
+		$("section").removeClass("widget_blockquote");					
     }	
     if (index == '' ) return; 				// this is true when loading page
 	if (index == 'toogle') 	currentStatus = (currentStatus == 'on')? 'off' : 'on'; // click on menubar to change
@@ -181,17 +246,11 @@ function pattern_toogle(index)
 	setCookie('patternStatus', currentStatus); // new value or the same one
 	// Switch Value on Nav Bar and Modify the configuration
 	if (currentStatus == 'off') {
-		$('#pattern-set').html('Pattern On');
-		$("section").removeClass("widget_blockquote");	
-		$("html").removeClass("background-pattern ");	
-		change_hover_sidebar(shadow4);	
-		color_widget(shadow4);							
+		$('#pattern-set').html('Widget Pattern On');
+		$("section").removeClass("widget_blockquote");								
     } else {
-		$('#pattern-set').html('Pattern Off');
-		$("section").addClass("widget_blockquote");	
-		$("html").addClass("background-pattern ");	
-		change_hover_sidebar(shadow8);
-		color_widget(shadow8);						
+		$('#pattern-set').html('Widget Pattern Off');
+		$("section").addClass("widget_blockquote");								
     }  	
 }
 $(function()
@@ -203,4 +262,18 @@ $(function()
 	init_box_color_strip();
 	inside_container('large');
   	load_style();
+  	// after load_style 
+	change_pattern('');  	
+  	$("#pattern").addClass("");
+  	$("#pattern_1").addClass("pattern-blue"); 
+  	$("#pattern_2").addClass("pattern-green");  
+  	$("#pattern_3").addClass("pattern-grey");
+  	$("#pattern_4").addClass("pattern-cross"); 
+  	$("#pattern_5").addClass("pattern-blue-print"); 
+  	$("#pattern_6").addClass("pattern-argyle");
+  	$("#pattern_7").addClass("pattern-bleu-stripes"); 
+  	$("#pattern_8").addClass("pattern-weave");  
+  	$("#pattern_9").addClass("pattern-stripes");    	 	  	 	 	
 });
+
+
