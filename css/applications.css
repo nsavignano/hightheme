@@ -161,14 +161,15 @@ background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+
 left:0px;
 top:0px;
 z-index:-1;
-background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAF0lEQVQYlWNgIAIoJhz5P6qInooYGBgAGDoWqW6vWjsAAAAASUVORK5CYII=) repeat;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGElEQVQImWNggILYlJQ0BhRObEpKGgwDAGHeB7jzTrqjAAAAAElFTkSuQmCC
+  ) repeat;
 }
 .pattern-grey {
 left:0px;
 top:0px;
 z-index:-1;
-background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMklEQVQYlWNgYGAwZkAFxjjEcApgSOKTIGgSVpOxKcKqmGiFRFuNUwCHGFaT8erCGuAAtV8HLQ/j6goAAAAASUVORK5CYII=
-  ) repeat;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARklEQVQYlWNgYGBgiE1JSUPGDGggNiUljQEmgUshnI8sia4QRRO6Seg0VoU4FWED2NyM1XRcijF9h8+D2IIEw824AhhdMQDJ+E0nPJC6zAAAAABJRU5ErkJggg==
+ ) repeat;
 }
 .pattern-cross {
 left:0px;

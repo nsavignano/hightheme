@@ -138,11 +138,12 @@ function color_hover_button (color, hover) {
 		$(this).css('color',color);		  
 	});	
 }
+// Used just for Pattern, keep the hover 
 function change_hover_sidebar(shadow)
 {
 	var color = $('.sidebar-heading').css('color');
 	var hover = $(".sidebar-heading").css('border-color');
-	var click = $('a.list-group-item').css('background-color');
+	var click = empty; // $('a.list-group-item').css('background-color');
 	color_hover_sidebar(color, hover, click, shadow);	
 }
 function color_hover_sidebar(color, hover, click, shadow)

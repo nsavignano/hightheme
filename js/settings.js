@@ -5,7 +5,11 @@ var settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
     sidebarState 	: 'auto',
 	effect3D 		: false,    
     device 			: '',
-    insideContainer	: 'large'
+    insideContainer	: 'large',
+    sidebarStatus 	: '',
+    navbarStatus 	: 'fix',
+    patternItem 	: '',
+    patternStatus 	: 'on'
 }
 
 /* Collapse and Extend the menubar when the page is < 768px) */
@@ -52,6 +56,8 @@ function change_style(style)
 		    	$('#sidebar-set').hide();
 		    	$('#navbar-inside').hide();
 				inside_container('large');  
+				// alert('sidebar_toogle');
+				sidebar_device('');
 				//$("html").css('overflow','hidden');  /* NEED This for the Small Device */
 		} else {
 				$('#sidebar').show();
@@ -102,10 +108,22 @@ function inside_container(index)
 
 	settingsState.insideContainer = insideContainer;     
 }
+function sidebar_device()
+{
+	
+	currentStatus =  'static';
+	settingsState.displaySidebar = currentStatus;    
+	localStorage.setItem("settings-state", JSON.stringify(settingsState));	
+	// Switch Value on Menu Bar and Modify the configuration
+	$("#sidebar-affix").removeClass('sidebar_fix');
+	$("#sidebar-affix").addClass('sidebar_rel'); 
+	$('#sidebar-set').html('Fixed Sidebar');  // Toogle info 							
+ 
+}
 function sidebar_toogle(index) 
 {
-	var currentStatus = getCookie('sidebarStatus') != undefined? 	getCookie('sidebarStatus') : '';
-	// Display the current value on Menu bar
+
+	var currentStatus 		= settingsState.displaySidebar != undefined? 	settingsState.displaySidebar : '';
 	if (currentStatus == 'fix') {
 		$('#sidebar-set').html('Static Sidebar'); // Toogle info 
 		$("#sidebar-affix").removeClass('sidebar_rel');
@@ -117,8 +135,11 @@ function sidebar_toogle(index)
     }	
     if (index == '' ) return; 				// this is true when loading page
 	if (index == 'toogle') 	currentStatus = (currentStatus == 'fix')? 'static' : 'fix'; // click on menubar to change
-					
-	setCookie('sidebarStatus', currentStatus); // new value or the same one
+
+
+	settingsState.displaySidebar = currentStatus;    
+	localStorage.setItem("settings-state", JSON.stringify(settingsState));	
+
 	// Switch Value on Menu Bar and Modify the configuration
 	if (currentStatus == 'static') {
 		$("#sidebar-affix").removeClass('sidebar_fix');
@@ -128,11 +149,14 @@ function sidebar_toogle(index)
 		$("#sidebar-affix").removeClass('sidebar_rel');
 		$("#sidebar-affix").addClass('sidebar_fix');
     	$('#sidebar-set').html('Static Sidebar'); // Toogle info 					
-    }   
+    } 
+
 }
+
 function navbar_toogle(index) 
 {
-	var currentStatus = getCookie('navbarStatus') != undefined? 	getCookie('navbarStatus') : 'fix';
+
+	var currentStatus 		= settingsState.navbarStatus != undefined? 	settingsState.navbarStatus : 'fix';		
 	// Display the current value on Nav bar
 	if (currentStatus == 'fix') {
 		$('#navbar-set').html('Static Header');
@@ -146,7 +170,8 @@ function navbar_toogle(index)
     if (index == '' ) return; 				// this is true when loading page
 	if (index == 'toogle') 	currentStatus = (currentStatus == 'fix')? 'static' : 'fix'; // click on menubar to change
 					
-	setCookie('navbarStatus', currentStatus); // new value or the same one
+	settingsState.navbarStatus = currentStatus;
+	localStorage.setItem("settings-state", JSON.stringify(settingsState));	
 	// Switch Value on Nav Bar and Modify the configuration
 	if (currentStatus == 'fix') {
 		$('#navbar-set').html('Static Header');
@@ -162,7 +187,7 @@ function navbar_toogle(index)
 function change_pattern(id) 
 {
 
-	var patternItem = getCookie('patternItem') != undefined? 	getCookie('patternItem') : '';
+	var patternItem 		= settingsState.patternItem != undefined? 	settingsState.patternItem : '';	
 	if (patternItem != '') $("html").removeClass(patternItem);
 
 	if (id == '') id = patternItem;
@@ -226,12 +251,14 @@ function change_pattern(id)
 		color_widget(shadow4);
 		patternItem = 	"";			
 	}
-	setCookie('patternItem', patternItem); // new value or the same one
+	settingsState.patternItem = patternItem;
+	localStorage.setItem("settings-state", JSON.stringify(settingsState));	
 }
 function pattern_toogle(index) 
 {
 
-	var currentStatus = getCookie('patternStatus') != undefined? 	getCookie('patternStatus') : 'on';
+
+	var currentStatus 	= settingsState.patternStatus != undefined? 	settingsState.patternStatus : 'on';		
 	// Display the current value on Nav bar
 	if (currentStatus == 'on') {
 		$('#pattern-set').html('Widget Pattern Off');
@@ -243,7 +270,8 @@ function pattern_toogle(index)
     if (index == '' ) return; 				// this is true when loading page
 	if (index == 'toogle') 	currentStatus = (currentStatus == 'on')? 'off' : 'on'; // click on menubar to change
 					
-	setCookie('patternStatus', currentStatus); // new value or the same one
+	settingsState.patternStatus = currentStatus;	
+	localStorage.setItem("settings-state", JSON.stringify(settingsState));	
 	// Switch Value on Nav Bar and Modify the configuration
 	if (currentStatus == 'off') {
 		$('#pattern-set').html('Widget Pattern On');
