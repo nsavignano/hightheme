@@ -324,7 +324,13 @@ background-size: 70px 120px;
 .navbar_rel1 {
   position:relative;
 }
- 
+ /* Insidde Container   */
+ #inside-container {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
 /*  ------------------ WIDGET ------------------- */
 .widget {
   padding: 30px;

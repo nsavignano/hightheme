@@ -236,8 +236,8 @@ function theme_settings(theme) {
 }  
 $(window).resize(function(e)
 {
-	var style 		= settingsState.background != undefined? 	settingsState.background : '';
-	change_style(style);
+	console.log('resize');
+	change_style('');
 	e.preventDefault();
 	e.stopPropagation();
 	// alert(document.documentElement.clientWidth);	        

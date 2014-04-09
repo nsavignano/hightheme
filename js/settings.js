@@ -4,7 +4,7 @@ var settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
     background 		: 'classic',
     sidebarState 	: 'auto',
 	effect3D 		: false,    
-    device 			: '',
+    mode 			: '',
     insideContainer	: 'large',
     sidebarStatus 	: '',
     navbarStatus 	: 'fix',
@@ -29,31 +29,46 @@ $('#menubar').click(function (e) {
 function change_style(style) 
 {
 
-		var background 			= settingsState.background != undefined? 	settingsState.background : '';
-		var effect3D 			= settingsState.effect3D != undefined? 		settingsState.effect3D : false;
-		var background_device 	= settingsState.device != undefined? 		settingsState.device : '';
+		var background 			= settingsState.background 	!= undefined? 	settingsState.background : '';
+		var effect3D 			= settingsState.effect3D 	!= undefined? 	settingsState.effect3D : false;
+		var current_style 		= settingsState.background 	!= undefined? 	settingsState.background : '';		
+		var background_mode 	= settingsState.mode 		!= undefined? 	settingsState.mode : '';
+		var refresh 			= true; // 	settingsState.patternItem = patternItem;
 		// if select one theme, have to remove Pattern if so
+		if (style == '' && background_mode == 'pattern') { // means don't refresh the current set, because it's pattern
+				refresh = false;			
+		} 
+console.log(style+':'+background_mode+':'+current_style);
 		if (style != '') change_pattern(10);
-		if ( (style == '') && (background == '') ) style = 'classic';
-		else if ( (style == '') && (background != '') ) style = background;
-		else { 
-			$("body").removeClass("background-"+background);
-			// empty the color frame inside the Theme menu
-			$('#'+background).css('background-color',empty);
-		}
-		// console.log(style+';'+background+':'+settingsState.device );
-		$("body").addClass("background-"+style); 
-		settingsState.background = style;
-		localStorage.setItem("settings-state", JSON.stringify(settingsState)); 
+		//if (refresh) {
+			settingsState.mode = '';
+			if (style == '') style = current_style;
+			if ( (style == '') && (background == '') && (current_style == '')) style = 'classic';
+			else if ( (style == '') && (background != '') ) style = background;
+			else { 
+				$("body").removeClass("background-"+background);
+				// empty the color frame inside the Theme menu
+				$('#'+background).css('background-color',empty);
+			}
+			// console.log(style+';'+background+':'+settingsState.mode );
+			$("body").addClass("background-"+style);
+			settingsState.background = style;
+			localStorage.setItem("settings-state", JSON.stringify(settingsState));			 
+		//}			
+ 
 
 
 		treeD_setting(effect3D);
 		theme_settings(style);		
 		if (parseInt(document.documentElement.clientWidth) < 768) { 
 			//alert(document.documentElement.clientWidth);
-				sidebar_toogle('static');			
+				sidebar_toogle('static');	 		
 		    	$('#sidebar').hide();
+		    	$('#pattern').hide();	
+				$('#pattern-id').hide();			    		    	
 		    	$('#sidebar-set').hide();
+		    	$('#pattern-divide').hide();		    	
+		    	$('#navbar-inside').hide();
 		    	$('#navbar-inside').hide();
 				inside_container('large');  
 				// alert('sidebar_toogle');
@@ -63,12 +78,17 @@ function change_style(style)
 				$('#sidebar').show();
 		    	$('#sidebar-set').show();
 		    	$('#navbar-inside').show();	
+		    	$('#pattern').show();	
+				$('#pattern-id').show();
+				$('#pattern-divide').show();
 				//$("html").css('overflow','visible');  /* NEED This for the Small Device */		    		    		    				
 		}
-
+		var patternItem  = settingsState.patternItem != undefined? 	settingsState.patternItem : '';
+		if (patternItem != '') change_pattern(patternItem);
 }
 function load_style()
 {
+	console.log('load_style');
 	change_style('');
 }
 function OpenPage(url,index)
@@ -106,7 +126,8 @@ function inside_container(index)
 		$("#sidebar").css('width','200px');    	 														
     } 
 
-	settingsState.insideContainer = insideContainer;     
+	settingsState.insideContainer = insideContainer;  
+	localStorage.setItem("settings-state", JSON.stringify(settingsState));	   
 }
 function sidebar_device()
 {
@@ -190,6 +211,7 @@ function change_pattern(id)
 	var patternItem 		= settingsState.patternItem != undefined? 	settingsState.patternItem : '';	
 	if (patternItem != '') $("html").removeClass(patternItem);
 
+
 	if (id == '') id = patternItem;
 	
 	if (id == "pattern-green") { 
@@ -251,6 +273,7 @@ function change_pattern(id)
 		color_widget(shadow4);
 		patternItem = 	"";			
 	}
+	if (patternItem != '')	settingsState.mode = 'pattern'; else settingsState.mode = '';
 	settingsState.patternItem = patternItem;
 	localStorage.setItem("settings-state", JSON.stringify(settingsState));	
 }
@@ -292,7 +315,7 @@ $(function()
   	load_style();
   	// after load_style 
 	change_pattern('');  	
-  	$("#pattern").addClass("");
+  	$("#pattern_0").addClass("");
   	$("#pattern_1").addClass("pattern-blue"); 
   	$("#pattern_2").addClass("pattern-green");  
   	$("#pattern_3").addClass("pattern-grey");
