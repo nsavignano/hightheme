@@ -13,7 +13,7 @@ var sand_maple 		= '#A6522D';
 function sand_style()
 {
 	color_title(sand_white, sand);
-	color_navbar(sand_dark, sand_white); // sand_green
+	color_navbar(sand_dark, sand_green); // sand_green
 
 	color_hover_inside_navbar(sand, sand_green);
 	color_hover_caret_navbar(sand, sand_green);

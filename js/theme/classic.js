@@ -18,7 +18,7 @@ var classic_white 				= '#fffffe';
 function classic_style()
 {
 	color_title(classic_lullaby, classic_blue);
-	color_navbar(classic_inspiration, classic_inspiration);
+	color_navbar(classic_inspiration, classic_blue);
 
 	color_hover_inside_navbar(classic_blue, classic_lullaby);
 	color_hover_caret_navbar(classic_blue, classic_lullaby);

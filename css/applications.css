@@ -151,79 +151,7 @@ body.background-talisman {
   background: -moz-radial-gradient(10% 0, farthest-side ellipse, #879180, #D6E6CB, #D6E6CB), url("../img/background.jpg");  
   background: radial-gradient(farthest-side ellipse at 10% 0, #879180, #D6E6CB 40%, #D6E6CB), url("../img/background.jpg");       
 }
-.pattern-green {
-left:0px;
-top:0px;
-z-index:-1;
-background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAG0lEQVQYlWMw35z+nxjMcOzxxf+E8KhC6ikEAIjtRUmHWTQWAAAAAElFTkSuQmCC) repeat;
-}
-.pattern-blue {
-left:0px;
-top:0px;
-z-index:-1;
-background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGElEQVQImWNggILYlJQ0BhRObEpKGgwDAGHeB7jzTrqjAAAAAElFTkSuQmCC
-  ) repeat;
-}
-.pattern-grey {
-left:0px;
-top:0px;
-z-index:-1;
-background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARklEQVQYlWNgYGBgiE1JSUPGDGggNiUljQEmgUshnI8sia4QRRO6Seg0VoU4FWED2NyM1XRcijF9h8+D2IIEw824AhhdMQDJ+E0nPJC6zAAAAABJRU5ErkJggg==
- ) repeat;
-}
-.pattern-cross {
-left:0px;
-top:0px;
-z-index:-1;
-background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARElEQVQYlWOITUv7H5WSYowPx6al/WeAMfApikpJMWZAF8CmCEVhVEqKcWxKSho2NoZCmAJ0ReQrJMpqojxDVPAQG+AA/veQyXukzbsAAAAASUVORK5CYII=
-  ) repeat;
-}
 
-.pattern-weave {
-background:
-linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
-linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
-background-color:#708090;
-background-size: 64px 64px
-}
-
-
-.pattern-blue-print
-{
-background-color:#269;
-background-image: linear-gradient(white 2px, transparent 2px),
-linear-gradient(90deg, white 2px, transparent 2px),
-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
-background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px
-
-}
-
-.pattern-bleu-stripes
-{
-  background-size: 50px 50px;
-background-color: #0ae;
-background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
-background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
-background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
--pie-background: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent) 0 0 / 50px #0ae;
-behavior: url(/pie/PIE.htc);
-}
-.pattern-argyle {
-  background-color: #6d695c;
-background-image:
-repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
-linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-background-size: 70px 120px;
-}
-.pattern-stripes
-{
-  background-color: gray;
-  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
-}
 /* Colours Panel  */
 .orange         {background-color: #FF9933;}
 .ivoire         {background-color: #FFEBCC;}
@@ -324,12 +252,105 @@ background-size: 70px 120px;
 .navbar_rel1 {
   position:relative;
 }
- /* Insidde Container   */
+ /* ------------- Insidde Container  ----------- */
  #inside-container {
   padding-right: 0px;
   padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
+}
+/* ------------------ Pattern ----------------------*/
+#pattern {
+  margin-bottom : 60px;
+}
+#pattern-group {
+  text-align  : center;
+  width       : 100%; 
+  position    : relative;
+}
+.pattern {
+  cursor      : pointer;
+  margin-left : 5px;
+  width       : 15%;
+  height      : 25px;
+  border      : 1px solid #999;
+  float       : left;
+}
+.decale {
+  margin-top : 5px;
+}
+.pattern-green {
+left:0px;
+top:0px;
+z-index:-1;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAG0lEQVQYlWMw35z+nxjMcOzxxf+E8KhC6ikEAIjtRUmHWTQWAAAAAElFTkSuQmCC) repeat;
+}
+.pattern-blue {
+left:0px;
+top:0px;
+z-index:-1;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGElEQVQImWNggILYlJQ0BhRObEpKGgwDAGHeB7jzTrqjAAAAAElFTkSuQmCC
+  ) repeat;
+}
+.pattern-grey {
+left:0px;
+top:0px;
+z-index:-1;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARklEQVQYlWNgYGBgiE1JSUPGDGggNiUljQEmgUshnI8sia4QRRO6Seg0VoU4FWED2NyM1XRcijF9h8+D2IIEw824AhhdMQDJ+E0nPJC6zAAAAABJRU5ErkJggg==
+ ) repeat;
+}
+.pattern-cross {
+left:0px;
+top:0px;
+z-index:-1;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARElEQVQYlWOITUv7H5WSYowPx6al/WeAMfApikpJMWZAF8CmCEVhVEqKcWxKSho2NoZCmAJ0ReQrJMpqojxDVPAQG+AA/veQyXukzbsAAAAASUVORK5CYII=
+  ) repeat;
+}
+
+.pattern-weave {
+background:
+linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+background-color:#708090;
+background-size: 64px 64px
+}
+
+
+.pattern-blue-print
+{
+background-color:#269;
+background-image: linear-gradient(white 2px, transparent 2px),
+linear-gradient(90deg, white 2px, transparent 2px),
+linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px
+
+}
+
+.pattern-bleu-stripes
+{
+  background-size: 50px 50px;
+background-color: #0ae;
+background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+-pie-background: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent) 0 0 / 50px #0ae;
+behavior: url(/pie/PIE.htc);
+}
+.pattern-argyle {
+  background-color: #6d695c;
+background-image:
+repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+background-size: 70px 120px;
+}
+.pattern-stripes
+{
+  background-color: gray;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
 }
 /*  ------------------ WIDGET ------------------- */
 .widget {
@@ -685,6 +706,13 @@ border: 0.1px solid #999;
   opacity:0.8;
   filter:alpha(opacity=80); /* For IE8 and earlier */  
 }
+#shape {
+  margin-bottom : 55px;
+}
+#user-margin_bottom {
+  margin-bottom : 10px;
+}
+
 .div-btn-shape {  
   float:left;
   position: relative;
@@ -758,7 +786,13 @@ font-family:"Times New Roman",Times,serif;
 #myCanvas3d {
   border:0px solid #d3d3d3;
 }
-
+.copyright {
+  margin-top  : 80px;
+}
+/* ------------------- Override Bootstrap definition ----------------------- */ 
+.pull-right {
+  margin-top  : 80px;
+}
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 768px) {
 
@@ -783,7 +817,7 @@ font-family:"Times New Roman",Times,serif;
     display: block !important;
   }
  .visible-phone { /* don' take out the ';' somethingn wrong but work so far */
-    display: none; !important;
+    display: none !important;
   } 
   .responsive {
       margin-top: 0px;
@@ -808,7 +842,7 @@ font-family:"Times New Roman",Times,serif;
     display: block !important;
   }
  .visible-phone {
-    display: none; !important;
+    display: none !important;
   } 
   .responsive {
       margin-top: 0px;

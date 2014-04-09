@@ -15,8 +15,8 @@ var talisman_fog 			= '#FFEFD5';
 
 function talisman_style()
 {
-	color_title(talisman_dark, talisman_fire_station);
-	color_navbar(shadow4, talisman_dark);
+	color_title(shadow8, talisman_fire_station);
+	color_navbar(shadow4, talisman_fire_station);
 
 	color_hover_inside_navbar(talisman_dark, talisman_fire_station);
 	color_hover_caret_navbar(talisman_fire_station, talisman_white);

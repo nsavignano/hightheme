@@ -38,7 +38,7 @@ function change_style(style)
 		if (style == '' && background_mode == 'pattern') { // means don't refresh the current set, because it's pattern
 				refresh = false;			
 		} 
-console.log(style+':'+background_mode+':'+current_style);
+// console.log(style+':'+background_mode+':'+current_style);
 		if (style != '') change_pattern(10);
 		//if (refresh) {
 			settingsState.mode = '';
@@ -210,7 +210,7 @@ function change_pattern(id)
 
 	var patternItem 		= settingsState.patternItem != undefined? 	settingsState.patternItem : '';	
 	if (patternItem != '') $("html").removeClass(patternItem);
-
+	var pattern_title 	= '';
 
 	if (id == '') id = patternItem;
 	
@@ -219,60 +219,61 @@ function change_pattern(id)
 		color_widget(shadow8);			
 		change_hover_sidebar(shadow8);	
 		patternItem = 	"pattern-green";
+		pattern_title = $("#pattern_2").attr('title');
 	} else if (id == "pattern-blue") { // pattern-blue
 		$("html").addClass("pattern-blue");
 		change_hover_sidebar(shadow8);
 		color_widget(shadow8);	
-		patternItem = 	"pattern-blue";			
- 	} else if (id == "pattern-strip") {  // pattern-strip
-		$("html").addClass("pattern-strip");
-		change_hover_sidebar(shadow8);
-		color_widget(shadow8);	
+		patternItem = 	"pattern-blue";		
+		pattern_title = $("#pattern_1").attr('title');						
 	} else if (id == "pattern-grey") { // pattern-grey
 		$("html").addClass("pattern-grey");
 		change_hover_sidebar(shadow8);
 		color_widget(shadow8);	
-		patternItem = 	"pattern-grey";			
+		patternItem = 	"pattern-grey";	
+		pattern_title = $("#pattern_3").attr('title');				
  	} else if (id == "pattern-cross") {  // pattern-strip
 		$("html").addClass("pattern-cross");
 		change_hover_sidebar(shadow8);
 		color_widget(shadow8);		
 		patternItem = 	"pattern-cross";	
+		pattern_title = $("#pattern_4").attr('title');		
  	} else if (id == "pattern-bleu-stripes") { // pattern-bleu-stripes
 		$("html").addClass("pattern-bleu-stripes");
 		change_hover_sidebar(shadow8);
 		color_widget(shadow8);	
 		patternItem = 	"pattern-bleu-stripes";
+		pattern_title = $("#pattern_7").attr('title');		
  	} else if (id == "pattern-blue-print") {  // pattern-blue-print
 		$("html").addClass("pattern-blue-print");
 		change_hover_sidebar(shadow8);
 		color_widget(shadow8);	
 		patternItem = 	"pattern-blue-print";
+		pattern_title = $("#pattern_5").attr('title');		
  	} else if (id == "pattern-argyle") {  // pattern-argyle
 		$("html").addClass("pattern-argyle");
 		change_hover_sidebar(shadow8);
 		color_widget(shadow8);	
 		patternItem = 	"pattern-argyle";
- 	} else if (id == "pattern-upholstery") { // 
-		$("html").addClass("pattern-upholstery");
-		change_hover_sidebar(shadow8);
-		color_widget(shadow8);	
-		patternItem = 	"pattern-upholstery";
+		pattern_title = $("#pattern_6").attr('title');			
  	} else if (id == "pattern-stripes") {  // pattern-tiles
 		$("html").addClass("pattern-stripes");
 		change_hover_sidebar(shadow8);
 		color_widget(shadow8);	
 		patternItem = 	"pattern-stripes";
+		pattern_title = $("#pattern_9").attr('title');		
  	} else if (id == "pattern-weave") {  // pattern-waves
 		$("html").addClass("pattern-weave");
 		change_hover_sidebar(shadow8);
 		color_widget(shadow8);	
-		patternItem = 	"pattern-weave";		
+		patternItem = 	"pattern-weave";	
+		pattern_title = $("#pattern_8").attr('title');			
 	} else {
 		change_hover_sidebar(shadow4);
 		color_widget(shadow4);
 		patternItem = 	"";			
 	}
+	$('#pattern-id').html('<li class="dropdown-header text_line">Pattern: <strong class="'+shadow4+'" style="font-size:14px">'+pattern_title+'<strong></li>');
 	if (patternItem != '')	settingsState.mode = 'pattern'; else settingsState.mode = '';
 	settingsState.patternItem = patternItem;
 	localStorage.setItem("settings-state", JSON.stringify(settingsState));	

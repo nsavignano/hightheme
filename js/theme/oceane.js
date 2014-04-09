@@ -38,7 +38,7 @@ function oceane_sidebar()
 function oceane_style()
 {
 	color_title(oceane_white, oceane);
-	color_navbar(oceane_dark, oceane_white);
+	color_navbar(oceane_dark, oceane_red);
 
 	color_hover_inside_navbar(oceane, oceane_red);
 	color_hover_caret_navbar(oceane, oceane_red);	

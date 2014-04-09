@@ -69,6 +69,7 @@ function color_navbar(back, border)
 	$('.navbar-default').css('background',back);			// Navbar
 	$('.navbar-default').css('border-bottom-color',border); // Navbar
 	$('.dropdown-menu').css('border-top','2px solid '+border);	// le top of the drop down menu
+	$('.dropdown-menu').css('border-bottom','3px solid '+border);	// le top of the drop down menu	
 }
 /* 2D / 3D Box inside the dropdown Menu bar */
 function color_square_badge(color, back)
@@ -209,7 +210,6 @@ function init_box_color_strip()
 function theme_settings(theme) {
 
 	$('#theme-id').html('<li class="dropdown-header text_line">Theme: <strong class="'+shadow4+'" style="font-size:14px">'+theme+'<strong></li>');
-	$('#pattern-id').html('<li class="dropdown-header text_line">Pattern: <strong class="'+shadow4+'" style="font-size:14px"><strong></li>');
 
 	if (theme == 'oceane') { 		
 		oceane_style();

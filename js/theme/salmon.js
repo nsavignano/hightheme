@@ -15,7 +15,7 @@ var salmon_best_friends 	= '#FFA500';
 function salmon_style()
 {
 	color_title(salmon_white, salmon_grey_dark);
-	color_navbar(salmon, sand_white);
+	color_navbar(salmon, salmon_blue);
 
 	color_hover_inside_navbar(salmon_white, salmon_blue);
 	color_hover_caret_navbar(salmon_blue, salmon_white);

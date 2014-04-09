@@ -50,7 +50,7 @@
         </button>
         <a id="brand-pre" class="navbar-brand" href="carousel/index.html">High <b id="brand-suf">Theme</b></a>
         <li id="dropdown" class="dropdown">
-          <a  id="drop-toggle" href="#" class="dropdown-toggle visible-phone" data-toggle="dropdown"><b class="caret"></b></a>
+          <a  id="drop-toggle" href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
           <ul id="drop-menu" class="dropdown-menu" role="menu">
             <li><a id="navbar-inside" href="#"  onclick="inside_container('')"></a></li>
             <li><a id="navbar-set" href="#"     onclick="navbar_toogle('toogle')"></a></li>
@@ -58,55 +58,56 @@
             <li><a id="pattern-set" href="#"    onclick="pattern_toogle('toogle')"></a></li> 
             <li id="pattern-divide" class="divider"></li>
             <div id="pattern-id"> </div> 
-            <li id="pattern" style="margin-bottom:60px;">  
-            <div  text-align="center"  style="width:100%; position:relative;">
-                  <div id="pattern_0"  onclick="change_pattern(9);" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div> 
-                  <div id="pattern_1"  onclick="change_pattern('pattern-blue');" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div>   
-                  <div id="pattern_2"  onclick="change_pattern('pattern-green');" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div> 
-                  <div id="pattern_3"  onclick="change_pattern('pattern-grey');" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div> 
-                  <div id="pattern_4"  onclick="change_pattern('pattern-cross');" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div> 
-                  <div id="pattern_5"  onclick="change_pattern('pattern-blue-print');" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div> 
-                  <div id="pattern_6"  onclick="change_pattern('pattern-argyle');" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div>   
-                  <div id="pattern_7"  onclick="change_pattern('pattern-bleu-stripes');" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div> 
-                  <div id="pattern_8"  onclick="change_pattern('pattern-weave');" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div> 
-                  <div id="pattern_9"  onclick="change_pattern('pattern-stripes');" style="cursor:pointer;margin-left:5px;width:15%;height:25px;border: 1px solid #999;float: left;"></div>         
+            <li id="pattern">  
+            <div  id="pattern-group">
+                  <div id="pattern_0"  class="pattern"  title="Blank" onclick="change_pattern(9);"></div> 
+                  <div id="pattern_1"  class="pattern"  title="Small Grid" onclick="change_pattern('pattern-blue');"></div>   
+                  <div id="pattern_2"  class="pattern"  title="Green Grid" onclick="change_pattern('pattern-green');"></div> 
+                  <div id="pattern_3"  class="pattern"  title="Diagonal Grid" onclick="change_pattern('pattern-grey');"></div> 
+                  <div id="pattern_4"  class="pattern"  title="Metal Grid"  title="Classic" onclick="change_pattern('pattern-cross');"></div> 
+                  <div id="pattern_5"  class="pattern  decale"  title="Blue Tile" onclick="change_pattern('pattern-blue-print');"></div> 
+                  <div id="pattern_6"  class="pattern  decale"  title="Grey Losange" onclick="change_pattern('pattern-argyle');"></div>   
+                  <div id="pattern_7"  class="pattern  decale"  title="Blue Stripe" onclick="change_pattern('pattern-bleu-stripes');"></div> 
+                  <div id="pattern_8"  class="pattern  decale"  title="Grey Tile" onclick="change_pattern('pattern-weave');"></div> 
+                  <div id="pattern_9"  class="pattern  decale"  title="Grey Stripe" onclick="change_pattern('pattern-stripes');"></div>        
             </div>    
-
             </li>                            
             <li class="divider"></li>
             <div id="theme-id"></div>
             <li>
-            <div id="classic" title="Classic" class="div-btn" onclick="change_style('classic');">
-            <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
-            </div>  
-            <div id="sand" title="Sand" class="div-btn" onclick="change_style('sand');">
-            <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
-            </div>                
-            <div id="oceane" title="Ocean" class="div-btn" onclick="change_style('oceane');">
-            <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
-            </div>
+              <div id="classic" title="Classics" class="div-btn" onclick="change_style('classic');">
+              <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
+              </div>  
+              <div id="sand" title="Sand" class="div-btn" onclick="change_style('sand');">
+              <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
+              </div>                
+              <div id="oceane" title="Ocean" class="div-btn" onclick="change_style('oceane');">
+              <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
+              </div>
             </li>
             <li>
-            <div id="salmon" title="Salmon" class="div-btn" onclick="change_style('salmon');">
-            <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
-            </div>
-            <div id="talisman" title="Talisman" class="div-btn" onclick="change_style('talisman');">
-            <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
-            </div>  
-            <div id="turquoise" title="Turquoise" class="div-btn" onclick="change_style('turquoise');">
-            <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
-            </div>
+              <div id="salmon" title="Salmon" class="div-btn" onclick="change_style('salmon');">
+              <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
+              </div>
+              <div id="talisman" title="Talisman" class="div-btn" onclick="change_style('talisman');">
+              <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
+              </div>  
+              <div id="turquoise" title="Turquoise" class="div-btn" onclick="change_style('turquoise');">
+              <div id="pattern1"></div><div id="pattern2"></div><div id="pattern3"></div>
+              </div>
             </li>
             <li id="text3D" class="dropdown-header text_line"><strong class="badge">2D</strong> / 3D</li>
-            <li>
-            <div title="2D Shape"  class="div-btn-shape" onclick="treeD_setting(false);">
-            <canvas id="myCanvas2d" width="50" height="40"></div>
-            <div title="3D Shape" class="div-btn-shape" onclick="treeD_setting(true);">
-            <canvas id="myCanvas3d" width="50" height="40"></div></li>
-            <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Shape Setting</a>
+            <li id="shape">
+              <div title="2D Shape"  class="div-btn-shape" onclick="treeD_setting(false);">
+              <canvas id="myCanvas2d" width="50" height="40"></div>
+              <div title="3D Shape" class="div-btn-shape" onclick="treeD_setting(true);">
+              <canvas id="myCanvas3d" width="50" height="40"></div>
             </li>
-            <li class="divider"></li>                
-            <li><a href="#"><span class="glyphicon glyphicon-off"></span> Logout</a></li>            
+            <li class="divider"></li>       
+            <li><a class="visible-phone" href="#"><span class="glyphicon glyphicon-inbox"></span><span class="badge"> 10</span> E-Mail</a></li>                     
+            <li  id="zina1"><a  rel="drevil1" class="visible-phone" href="#"><span class="glyphicon glyphicon-comment"></span><span class="badge"> 23</span> Messages</a></li>
+            <li><a class="visible-phone" href="#"><span class="glyphicon glyphicon-bell"></span><span class="badge"> 42</span> Alarms</a></li>
+            <li id="user-margin_bottom"><a class="visible-phone" href="#" id="settings1"><span class="glyphicon glyphicon-user"></span> Noel Savignano</a></li>            
           </ul> <!-- /dropdown-menu -->
         </li> <!-- /dropdown -->
       </div> <!-- /navbar-header -->
@@ -239,8 +240,8 @@
       </div>  <!-- end row --> 
   
 
-  <p class="pull-right" style="margin-top:80px"><a href="#">Back to top</a></p>
-  <p style="margin-top:80px">2014 High Theme. &copy;  &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  <p class="pull-right"><a href="#">Back to top</a></p>
+  <p class="copyright">2014 High Theme. &copy;  &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </div> <!-- col-xs-12 col-md-10 -->
 </div> <!-- end row -->
 </div><!-- /.starter-template -->
