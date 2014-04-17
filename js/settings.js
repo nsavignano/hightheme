@@ -63,7 +63,7 @@ function change_style(style)
 			settingsState.background = style;
 			localStorage.setItem("settings-state", JSON.stringify(settingsState));			 
 		//}			
- console.log($(window).width()+':'+screen.availWidth);
+ // console.log($(window).width()+':'+screen.availWidth);
 		treeD_setting(effect3D);
 		theme_settings(style);		
 		if (parseInt(document.documentElement.clientWidth) < 755) { 
