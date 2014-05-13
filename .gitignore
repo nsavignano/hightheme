@@ -1,0 +1,12 @@
+# Test Files #
+128x128/*	# ignore everything in the directory
+640x640/*
+800x800/*
+1024x1024/*
+bootstrap/*
+bootstrap-3.1.1/*
+favicon.ico
+README.md
+
+#example 
+#!lib/model/om/foo   # except foo
